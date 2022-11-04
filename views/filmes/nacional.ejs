@@ -1,0 +1,131 @@
+<%- include('./header.ejs') %>
+
+<body>
+    <!-- navbar  -->
+    <%- include('../navbar.ejs') %>
+    <!-- Filmes -->
+    <!-- O Auto da compadecida -->
+    <section id="filme1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-9 coluna-filmes">
+                    <iframe class="trailers" width="100%" height="450px"
+                        src="https://www.youtube.com/embed/ewaz-WuKdo8?start=6"
+                        title="Trailer Para todos os garotos:Agora e para sempre legendado"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="info-filme">
+                        <div class="detalhes_filme">
+                            <h2 class="titulo_filme">O Auto da Compadecida</h2>
+                            <div>
+                                <span class="texto_filme_detalhes">2000</span><span class="texto_filme_detalhes">1h
+                                    44m</span><img src="imagens/icones/classificacao-12.png" alt="classificacao 12 anos"
+                                    class="btn" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    title="Classificação 12 anos">
+                            </div>
+                        </div>
+
+                        <div class="rating_links">
+                            <div>
+                                <a href="https://globoplay.globo.com/o-auto-da-compadecida/t/TMFdjjCFHM/"
+                                    target="_blank" rel="external"><img src="imagens/icones/globo.png"
+                                        alt="globo play"></a>
+                            </div>
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="nav-sinopse nav nav-pills">
+                        <li class="nav-item">
+                            <a data-bs-toggle="pill" class="nav-link active" href="#GarotosSinopse">Sinopse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-bs-toggle="pill" class="nav-link" href="#GarotosCritica">Critica</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="GarotosSinopse" class="tab-pane container active">
+                            <p class="texto_sinopse"> As aventuras de João Grilo e Chicó, dois nordestinos pobres que
+                                vivem de golpes para sobreviver. Eles estão sempre enganando o povo de um pequeno
+                                vilarejo, inclusive o temido cangaceiro Severino de Aracaju, que os persegue pela
+                                região.</p>
+                        </div>
+                        <div id="GarotosCritica" class="tab-pane container fade">
+                            <p class="texto_sinopse">O que faz o "Auto da Compadecida" ser um dos maiores clássicos do
+                                cinema nacional, é bela construção de roteiro, atores que dedicam de corpo e alma e
+                                encarna os personagens, além de uma trilha sonora emocionante e representação perfeita
+                                do povo nordestino. O humor é simplesmente incrível, e não enjoa, momentos engraçados e
+                                cenas memoráveis. Por isso muita gente gosta do filme, é mais que obra cinematográfica,
+                                um marco na vida. Ariano Suassuna escreve bem na questão da religião e o julgamento dos
+                                personagens. Uma obra de arte, VIVA O CINEMA NACIONAL, VIVA O NORDESTE.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filmes-sidebar col-lg-3">
+                    <img class="img-fluid" src="imagens/posters/auto_da_compadecidaPoster.jpg"
+                        alt="Poster do filme para todos os garotos">
+                    <div class="div-info-adicional">
+                        <ul class="nav-info nav nav-tabs nav-fill">
+                            <li class="nav-item">
+                                <a data-bs-toggle="tab" class="nav-link active" aria-current="page"
+                                    href="#GarotosElenco"><i class="fa-solid fa-video fa-2x"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a a data-bs-toggle="tab" class="nav-link" href="#GarotosSpotify">
+                                    <i class="fa-solid fa-music fa-2x"></i></a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="GarotosElenco" class="elenco tab-pane container active">
+                                <ul class="lista-elenco list-group">
+                                    <li class="list-group-item"><img class="icone-ator"
+                                            src="imagens/nacional/matheus_nachtergaele.jpg">Matheus</li>
+                                    <li class="list-group-item"><img class="icone-ator"
+                                            src="imagens/nacional/selton_melo.jpg">Selton Melo</li>
+                                    <li class="list-group-item"><img class="icone-ator"
+                                            src="imagens/nacional/Virginia_atriz.jpg">Virginia Moura</li>
+                                    <li class="list-group-item"><img class="icone-ator"
+                                            src="imagens/nacional/Denise_atriz.jpg">Denise Rodrigues </li>
+                                    <li class="list-group-item"><img class="icone-ator"
+                                            src="imagens/nacional/Luís_atriz.jpg">Luís Alberto </li>
+                                </ul>
+                            </div>
+                            <div id="GarotosSpotify" class="spotify tab-pane container fade">
+                                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/5819354&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                                <div
+                                    style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                                    <a href="https://soundcloud.com/lucas-kawauker" title="Cangaço Digital"
+                                        target="_blank" style="color: #cccccc; text-decoration: none;">Cangaço
+                                        Digital</a> · <a
+                                        href="https://soundcloud.com/lucas-kawauker/sets/trilha-sonora-filme-o-auto-da"
+                                        title="Trilha Sonora - Filme O Auto da Compadecida" target="_blank"
+                                        style="color: #cccccc; text-decoration: none;">Trilha Sonora - Filme O Auto da
+                                        Compadecida</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+
+    </section>
+
+    <!-- Footer -->
+    <%- include('../footer.ejs') %>
+</body>
+
+
+</html>

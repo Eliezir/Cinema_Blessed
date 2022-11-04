@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Boostrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+  <!-- Owl carousel Min.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Owl carousel Theme Min.css -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="imagens/posters/abençoados.ico" type="image/x-icon">
+  <!-- GoogleFonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/e06ad0a210.js" crossorigin="anonymous"></script>
+  <!-- Css -->
+<!--   <link rel="stylesheet" href="css/default.css"> -->
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="stylesheets/default.css">
+  <title>The Blessed</title>
+</head>
+
+<body>
+  <!-- navbar  -->
+  <section id="header">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-default">
+      <div id=navbarContainer class="container-fluid">
+        <a class="navbar-brand" href="/sobre"> <img class="logo" src="imagens/logoBlessed.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarHeader">
+          <ul class="navbar-nav ms-start">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/lancamentos">Lançamentos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#series">Series</a></li></ul>
+            <ul class="navbar-nav ms-auto">
+              <%var logado = !usuario ? 'Login':usuario.user%>
+              <li class="nav-item"><a class="nav-link" href="/perfil"><%-logado%></a></li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Entre em contato</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="mailto:empn1@aluno.ifal.edu.br" target="_blank"
+                    rel="external">Eliezir</a></li>
+                <li><a class="dropdown-item" href="mailto:bfl1@aluno.ifal.edu.br" target="_blank"
+                    rel="external">Betuel</a></li>
+                <li><a class="dropdown-item" href="mailto:casl1@aluno.ifal.edu.br" target="_blank"
+                    rel="external">Carlos</a></li>
+                <li><a class="dropdown-item" href="mailto:gmvs1@aluno.ifal.edu.br" target="_blank"
+                    rel="external">Geovanny</a></li>
+                <li><a class="dropdown-item" href="mailto:jcbf1@aluno.ifal.edu.br" target="_blank"
+                    rel="external">Júlio</a></li>
+                </ </ul> </li> </ul> </div> </nav> <!-- <h1 class="titulo-carousel">Cinema abençoado</h1> -->
+        </div>
+  </section>
+
+  <!-- carousel conteudo -->
+  <div id="carouselConteudo" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="0">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselConteudo" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselConteudo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselConteudo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselConteudo" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="/adam" target="_self" rel="next">
+          <img src="imagens/CapaAdam.png" class="d-block w-100" alt="capa adam sandler">
+          <div class="carousel-caption d-none d-md-block">
+            <h4 class="legenda">Adam Sandler</h4>
+          </div>
+        </a>
+      </div>
+      <div class="carousel-item ">
+        <a href="/nacional" target="_self" rel="next">
+          <img src="imagens/CapaNacional.jpg" class=" d-block w-100" alt="Capa filmes nacionais">
+          <div class="carousel-caption d-none d-md-block">
+            <h4 class="legenda">Filmes Nacionais</h4>
+          </div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="/lancamentos" target="_self" rel="next">
+          <img src="imagens/CapaLancamento.png" class="d-block w-100" alt="Capa filmes em lançamento">
+          <div class="carousel-caption d-none d-md-block">
+            <h4 class="legenda">Lançamentos</h4>
+          </div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="/cliches" target="_self" rel="next">
+          <img src="imagens/CapaRomance.png" class="d-block w-100" alt="Capa filmes em lançamento">
+          <div class="carousel-caption d-none d-md-block">
+            <h4 class="legenda">Romances clichês</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselConteudo" data-bs-slide="prev">
+      <span> <i class="seta-carousel fa-solid fa-circle-arrow-left" aria-hidden="true"></i></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselConteudo" data-bs-slide="next">
+      <span><i class="seta-carousel fa-solid fa-circle-arrow-right" aria-hidden="true"></i></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- div oscars - row & col -->
+  <section id="oscars">
+    <div class="container-fluid div-oscars">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset">
+          <h2>Oscar os Abençoados da 7ª arte.</h2>
+          <a class="" href="Javascript:indisponivel()" target="_self" rel="next">
+            <img src="imagens/CapaOscars1080.png" class="img-fluid" alt="Capa de filmes oscars"></a>
+        </div>
+        <div class="sidebar-oscar col-lg-4">
+          <h2>Criticos</h2>
+          <div class="accordion" id="accordionCriticos">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingBetuel">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  Betuel Ferguson
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingBetuel"
+                data-bs-parent="#accordionCriticos">
+                <div class="accordion-body">
+                  <p class="criticos-texto"> Renomado critico francês, Betuel Ferguson é famoso por ter escrito durante
+                    anos para a <i>Cahiers du Cinéma</i> uma das maiores revistas de cinema do mundo e por ter competido
+                    na CNCTX, a competição nacional de contexto.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingCarlos">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Carlos Robertson IV
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingCarlos"
+                data-bs-parent="#accordionCriticos">
+                <div class="accordion-body">
+                  <p class="criticos-texto">Mundialmente conhecido, Carlos Robertson IV nasceu na irlanda, é um dos
+                    responsáveis pela criação do <i>Dublin International Film Festival</i>, o DIFF</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEliezir">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Eliezir Rosenbaum
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingEliezir"
+                data-bs-parent="#accordionCriticos">
+                <div class="accordion-body">
+                  <p class="criticos-texto">Canadense, Eliezir Rosenbaum é vice-presidente da Academia Canadense de
+                    Cinema e Televisão, responsável pelo Canadian Screen Awards</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingGeovanny">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Geovanny Dargis
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse " aria-labelledby="headingGeovanny"
+                data-bs-parent="#accordionCriticos">
+                <div class="accordion-body">
+                  <p class="criticos-texto">Antigo crítico eslovaco, Geovanny é especialista do genero gotico japones, tendo inclusive suas opiniões publicas na renomada revistas de anime, CoroCoro Comic
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headinggJulio">
+                <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Júlio César Haskell
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse collapse" aria-labelledby="headinJgulio"
+                data-bs-parent="#accordionCriticos">
+                <div class="accordion-body">
+                  <p class="criticos-texto">Natural de Maceió, Júlio César é amigo do dono do site.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- div series -->
+  <div class="bg-series" style="background-image: url(imagens/series-bg2.jpg);">
+    <section id="series">
+      <div class="container-fluid">
+        <h2>Séries</h2>
+        <div class="row">
+          <div class="col-12 m-auto">
+              <div class="owl-carousel owl-theme">
+                <div class="item mb-4">
+                  <div class="card border-0">
+                    <a class="" href="Javascript:indisponivel()" target="_self" rel="next">
+                      <img src="imagens/posters/Brooklyn99Poster300.jpg" alt="poster brooklyn nine-nine" class="card-img-top img-fluid">
+                      <div class="card-title">
+                        <h6>Brooklyn NINE-NINE</h6>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="item mb-4">
+                  <div class="card border-0">
+                    <a class="" href="Javascript:indisponivel()" target="_self" rel="next">
+                      <img src="imagens/posters/oneDayAtTimePoster300.jpg" alt="poster one day at time" class="card-img-top img-fluid">
+                      <div class="card-title">
+                        <h6>One Day At Time</h6>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="item mb-4">
+                  <div class="card border-0">
+                    <a class="" href="Javascript:indisponivel()" target="_self" rel="next">
+                      <img src="imagens/posters/TheofficePoster300.jpg" alt="poster the office" class="card-img-top img-fluid">
+                      <div class="card-title">
+                        <h6>The office</h6>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="item mb-4">
+                  <div class="card border-0">
+                    <a class="" href="Javascript:indisponivel()" target="_self" rel="next">
+                      <img src="imagens/posters/DrWhoPoster300.jpg" alt="poster Dr Who" class="card-img-top img-fluid">
+                      <div class="card-title">
+                        <h6>Dr Who</h6>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="item mb-4">
+                  <div class="card border-0">
+                    <a class="" href="Javascript:indisponivel()" target="_self" rel="next">
+                      <img src="imagens/posters/StrangerThings.jpg" alt="poster stranger things" class="card-img-top img-fluid">
+                      <div class="card-title">
+                        <h6>stranger things</h6>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="item mb-4">
+                  <div class="card border-0">
+                    <a class="" href="Javascript:indisponivel()" target="_self" rel="next">
+                      <img src="imagens/posters/How_I_Met_Mother.jpg" alt="poster how i met your mother"
+                        class="card-img-top img-fluid">
+                      <div class="card-title">
+                        <h6>how i met your mother</h6>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Footer -->
+    <%- include('../footer.ejs') %>
+  </div>
+  <!-- <div class="back-to-top">
+    <p>
+    <a href="#" id="back-to-top">
+      <font color="#b63b4d">Voltar ao topo </font><i class="ion-ios-arrow-thin-up"></i></a></div></p> -->
+
+
+  <!-- jquery cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+  <!-- Owl carousel Min .js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+ $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    dotsEach:1,
+    
+    navText:["<i class='seta-series fa-solid fa-circle-arrow-left fa-2x'></i>","<i class='seta-series fa-solid fa-circle-arrow-right fa-2x'></i>" ], 
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:4
+        }
+    }
+});
+
+// pag indisponivel
+function indisponivel() {
+    alert("Pagina ainda em desenvolvimento.");}
+
+
+
+// navbar topo e scroll
+$(window).scroll(function() {
+    let scrollPosition = $(window).scrollTop();
+    
+    if(scrollPosition < 10) {
+        $(".navbar").removeClass("navbar-scroll");
+    }
+    
+    if(scrollPosition > 10) {
+        $(".navbar").addClass("navbar-scroll");
+
+    }
+});
+
+
+
+  </script>
+
+
+</body>
+
+</html>

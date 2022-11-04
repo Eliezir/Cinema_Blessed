@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+
+body {
+  text-align: center;
+  color: #F1F0EB;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.texto_sinopse{
+font-size:16px;
+color:#b4BBC0;
+text-align: justify;
+}
+
+
+/* sections */
+#filme1,#filme2,#filme3 {
+  background: #141414;
+  padding-bottom: 30px;
+  padding-top:30px;
+}
+
+.titulo-section{
+  font-family: lobster;
+  margin-bottom:30px;
+  font-size: 3.5rem
+}
+
+
+/* containers */
+.coluna-filmes {
+  position: relative;
+  padding: 0;
+}
+
+iframe {
+  border: none;
+}
+
+
+.trailers {
+  display: inline;
+}
+/* descrição filmes */
+.titulo_filme {
+  text-align: left;
+}
+
+.texto_filme_detalhes {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+}
+
+.info-filme {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;}
+ 
+.assista a{
+  text-decoration: none;
+  color:white;
+  text-align:left;
+}
+
+.streamings-dropdown {
+  min-width: 0;
+}
+
+.detalhes_filme{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* estrelas */
+
+.checked {
+  color: orange;
+}
+.rating {
+  margin-left: 10px;
+} 
+
+.rating_links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+.detalhes_filme span::after {
+  content: '|';
+  display: inline-block;
+  margin: 0 15px;
+  color: #41494e;
+}
+
+
+/* nav pills sinopse */
+
+.nav-pills {
+  display: flex;
+  justify-content: center;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding-top: 30px;
+  margin-bottom: 40px;
+  list-style: none;
+}
+
+ul.nav{
+  border-bottom-color: #283643;
+}
+.nav-sinopse a {
+  position: relative;
+  padding: 0px 6px 18px 6px;
+  font-size:18px;
+  font-family: "Montserrat", "Open Sans", sans-serif;
+  color: #949CB0;
+  margin:0;
+}
+
+.nav-item a:hover{
+  color: #41494e;
+}
+
+.nav-sinopse .nav-link.active, .nav-pills .show>.nav-link{
+  color: #fff;
+  background-color:transparent;
+  color: rgb(141, 90, 241);}
+
+
+.nav-sinopse .nav-item + li.nav-item::before {
+  content: '/';
+  margin: 0px 25px 0 30px;
+  color: #949494;
+}
+
+.nav-sinopse .nav-item a.active:after {
+  content: ' ';
+  border-bottom: 3px solid transparent;
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  left: 0;
+  border-bottom-color: rgb(141, 90, 241);}
+
+
+.nav-sinopse li.nav-item{
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  display: -webkit-box;
+  display: flex;
+  flex-shrink: 0;
+  padding:0;
+  margin:0;
+}
+
+/* nav tab sidebar */
+
+.div-info-adicional{
+margin-top:30px;
+background: #333336;
+border-radius: 5%;
+}
+
+.nav-link{
+  color:#949CB0;
+}
+
+.nav-info .nav-link.active, .nav-tabs .show>.nav-link {
+  color: #fff;
+  color:#7442d8;
+  background-color: transparent;}
+
+.nav-info .nav-link{
+  border:none;
+}
+
+.nav-info{
+  margin-bottom:20px;
+  border:none;
+}
+
+
+.icone-ator{
+  border-radius:50%;
+  margin-right:10px;
+}
+
+.spotify,.elenco{
+  padding:0;
+}
+
+.filmes-sidebar{
+  padding:0;
+  padding-left:24px;
+}
+
+.list-group-item{
+  background-color: transparent;
+  text-align: left;
+  color:white;
+  }
+
+@media (max-width:600px) {
+  iframe {
+    border: none;
+    height: 240px;
+  }
+
+  .filmes-sidebar{
+    display: none;
+  }
+
+  .titulo_filme{
+    font-size:1rem;
+  }
+  .titulo-section{
+    font-size:1.5rem;
+  }
+
+  .texto_sinopse{
+    font-size:0.8rem;
+  }
+.rating{
+  width:max-content;
+}
+
+}

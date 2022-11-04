@@ -1,0 +1,38 @@
+<!--   Modal Create -->
+<div class="modal fade" id="modalC" tabindex="-1" aria-labelledby="modalCreateLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="CreateModalLabel">Comentário </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form id='createButton' action="/perfil/comentario" method="post">
+        <div class="modal-body">
+          <div class="bodyField">
+            <input id="filmeTitle" onchange="setPoster(this.value)" autocomplete="off" type="text" name="comentario[filme]" placeholder="Titulo" />
+            <p class='warningFilme'>Filme invalido</p>
+            <input id="inputNota" type="hidden" name="comentario[nota]" />
+            <input id="filmePoster" type="hidden" name="comentario[poster]" />
+            <textarea id="inputComentario" name="comentario[review]"></textarea>
+          </div>
+          <div class="bodyField">
+            <img class='posterModal' id='posterModal' src="">
+            <div class='rating'>
+              <span id='star1' class="fa fa-star-o checked ratingStars"></span>
+              <span id='star2' class="fa fa-star-o checked ratingStars"></span>
+              <span id='star3' class="fa fa-star-o checked ratingStars"></span>
+              <span id='star4' class="fa fa-star-o checked ratingStars"></span>
+              <span id='star5' class="fa fa-star-o checked ratingStars"></span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+          <button id='btnCreateComentario'type="submit" class="btn btn-success btn-primary">Comentar</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

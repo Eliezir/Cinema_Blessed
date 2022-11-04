@@ -1,0 +1,37 @@
+<!--   Modal Create -->
+<div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="modalCreateLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="CreateModalLabel">Editar Comentário </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id='editButton' action="/perfil/comentario" method="post">
+          <div class="modal-body">
+            <div class="bodyField">
+              <p class='warningFilme'>Filme invalido</p>
+              <input id="filmeTitleEdit" class="0" autocomplete="off" type="text" name="comentario[filme]"  onchange="setPoster(this.value,'edit')" value="<%-usuario.comentarios[0].filme %>"/>
+              <input id="inputNotaEdit" type="hidden" name="comentario[nota]" value=''/>
+              <input id="filmePosterEdit" type="hidden" name="comentario[poster]" />
+              <textarea id="inputComentarioEdit"   name="comentario[review]">teste</textarea>
+            </div>
+            <div class="bodyField">
+              <img class='posterModal' id='posterModalEdit' src="imagens/posters/atypicalPoster300.jpg">
+              <div class='rating'>
+                <span id='EditStar1' class="fa fa-star-o checked ratingStars"></span>
+                <span id='EditStar2' class="fa fa-star-o checked ratingStars"></span>
+                <span id='EditStar3' class="fa fa-star-o checked ratingStars"></span>
+                <span id='EditStar4' class="fa fa-star-o checked ratingStars"></span>
+                <span id='EditStar5' class="fa fa-star-o checked ratingStars"></span>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+  
+            <button onClick="checkSubmit(edit)" type="submit" class="btn btn-success btn-primary">Editar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>

@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend Deca', sans-serif;
+  color: white;
+}
+
+.visibility{
+  font-size: 30px;
+  color:white;
+}
+
+:root {
+  --white: #FFF;
+  --whitesmoke: #F9F9F9;
+  --light-grey: #ECECEC;
+  --grey: #C4C4C4;
+  --medium-grey: #A7A7A7;
+  --deep-grey: #181818;
+  --dark-grey: #141414;
+  --red: #CF3C3F;
+  --purple:#7442d8;
+}
+body{
+    background-color: var(--dark-grey);
+}
+
+
+.main{
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.loginScreen{
+    padding:25px;
+    width: 500px;
+    border-radius: 25px;
+    margin-left:5vw;
+  }
+
+.LoginImg{
+  width: 25vw;
+}
+
+#loginContainer{
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  padding:3vw;
+  background-color: var(--purple);
+  border-radius: 15px;
+}
+
+.login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  min-height: 100vh;
+  padding:clamp(35px,8%,70px);
+}
+
+
+.login__logo{
+  width:130px;
+  margin-bottom: 80px;
+}
+
+.login__title{
+  color:#fff;
+  font-size:1.5em;
+  margin-bottom:30px;
+}
+.img__title{
+  color:#fff;
+  font-size:2em;
+  font-weight: 700;
+}
+
+.login__label{
+  display:flex;
+  margin-bottom:20px;
+  width:100%;
+  border-radius:5px;
+  border:3px solid #202020;
+  background-color:var(--dark-grey);
+}
+
+
+
+
+
+.input{
+  background-color:transparent;
+  border: none;
+  width:100%;
+  border-radius:5px;
+  outline:none;
+  font-size:0.9em;
+  padding:25px 10px 10px;
+  font-weight:600;
+  color:var(--whitesmoke);
+}
+
+.login__label span{
+  position:absolute;
+  font-size:0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--medium-grey);
+  margin:20px;
+  cursor:text;
+  transition: all 200ms ease;
+}
+
+.login__label:focus-within{
+  background-color:var(--deep-grey);
+  border:var(--whitesmoke) solid 2px;
+}
+
+.login__label:focus-within .input, .login__label:focus-within .password__visible{
+  background-color:var(--deep-grey);
+
+}
+
+.login__label .span-active{
+  font-size: 0.7em;
+  margin: 8px;
+}
+
+.password__visible{
+  background-color:transparent;
+  display:none;
+  align-items: center;
+  cursor:auto;  
+  border:0;
+  margin: 0 10px;
+}
+
+.password__visible i{
+  color: var(--whitesmoke);
+  cursor:pointer;
+}
+
+.password__visible-active{
+  display: flex;
+}
+
+
+
+.login__icons{
+  display:flex;
+  gap:10px;
+  width: 100%;
+  margin-top:20px;
+}
+
+.login__icons img{
+  width:20px;
+}
+
+.icons__button{
+  width: 33.33%;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  height:35px;
+  border-radius:5px;
+  cursor:pointer;
+  border:none;
+  background-color: #202020;
+}
+
+.icons__button:hover{
+  filter:invert(15%)
+}
+
+/* .login__icons .icons__button:nth-child(1){
+  background-color:var(--blue);
+}
+.login__icons .icons__butto:nth-child(2){
+  background-color:var(--light);
+}
+.login__icons .icons__button:nth-child(3){
+  background-color:var(--black);
+}
+ */
+.login__label--checkbox{
+  width: 100%;
+  margin: 15px 0 50px;
+  font-size: 0.9em;
+  font-weight:500;
+  display: flex;
+  align-items: center;
+}
+
+.input--checkbox{
+  appearance: none;
+  width:20px;
+  height:20px;
+  background-color:var(--light-grey);
+  margin-right: 8px;
+  border-radius:3px;
+}
+
+
+.input--checkbox:checked{
+  background-color:var(--dark-grey);
+}
+
+.input--checkbox:checked::after{
+  content:"";
+  display:block;
+  width:5px;
+  height:10px;
+  border: 3px solid white;
+  border-width: 0 3px 3px 0 ;
+  transform: rotate(45deg);
+  margin: 4px auto;
+}
+
+
+
+  .entrar:disabled{
+  cursor:auto;
+  background-color:transparent;
+  border: 1.5px solid var(--medium-grey);
+  }
+
+  .entrar:disabled:hover{
+    cursor:not-allowed;
+    background-color:transparent;
+
+  }
+
+
+  .login__link{
+    font-size: 0 8em;
+    text-decoration: none;
+    color: var(--medium-grey);
+    text-transform: uppercase;
+    margin-bottom:5px;
+    font-weight:700;
+  }
+
+  .effects__label--checkbox{
+  width: 100%;
+  font-size: 0.9em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;}
+
+  .divEntrar{
+    display: flex;
+    height: 40px;
+
+  }
+  .entrar{
+    width: 180px;
+    height: 35px;
+    padding: 5px;
+    background-color: #181818;
+    border: 0;
+    border-radius: 10px;
+  }
+
+ .entrar:hover {
+    opacity: 0.75;
+  }
+
+
+  @media (max-width:850px) {
+   #loginContainer{
+    flex-direction: column;
+    padding:10px
+   }
+   .LoginImg{
+    width: 50vw;
+   }
+   .loginScreen{
+    width: 80vw;
+    margin-left: 0;
+   }
+
+ }

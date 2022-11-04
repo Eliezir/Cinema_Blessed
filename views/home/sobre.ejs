@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!-- Owl carousel Min.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Owl carousel Theme Min.css -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../imagens/abençoados.ico" type="image/x-icon">
+    <!-- GoogleFonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/e06ad0a210.js" crossorigin="anonymous"></script>
+    <!-- Css -->
+    <link rel="stylesheet" href="stylesheets/stylePerfil.css">
+    <link rel="stylesheet" href="stylesheets/default.css">
+    <link rel="stylesheet" href="stylesheets/styleSobre.css">    
+    <title>The Blessed</title>
+</head>
+
+<body>
+    <!-- navbar  -->
+    <%- include('../navbar.ejs') %>
+    <section id="intro-blessed">
+        <!-- pensar em links para ancorar nos icones(oscar/backtotop/?) -->
+        <div class="owl-carousel owl-theme">
+            <div class="card div-icones item mb-3">
+                <i class="icone fa-solid fa-4x fa-clapperboard"></i>
+                <h3>7ª Arte</h3>
+                <p>Tudo sobre seus filmes e séries preferidos</p>
+            </div>
+            <div class="card div-icones item mb-3">
+                <i class="icone fa-solid fa-4x fa-hands-praying"></i>
+                <h3>Os Abençoados</h3>
+                <p>Conheça mais sobre nossa equipe e o nosso propósito</p>
+            </div>
+            <div class="card div-icones item mb-3">
+                <i class="icone fa fa-4x fa-heart"></i>
+                <h3>Sugestões</h3>
+                <p>Entre em contato com a equipe!</p>
+            </div>
+        </div></div>
+    </section>
+    <section id="faq-blessed">
+        <h1>Perguntas Frequentes</h1>
+        <div class="accordion accordion-flush" id="AccordionFAQ">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  De onde veio o nome "Os Abençoados"
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordion-FAQ">
+                <div class="accordion-body">O nome veio de uma brincadeira onde o membro Betuel, o filho do pastor, sugeriu que utilizássemos "Os abençoados" como nome do grupo para a entrega de um trabalho de introdução a programação, desde então os abençoados(também conhecidos como The Blessed) se tornou o nome do grupo </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Quem são os Abençoados?
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordion-FAQ">
+                <div class="accordion-body">A equipe Abençoada é composta por Betuel ferreira, Carlos Augusto, Eliezir Moreira, Geovannny Max e Júlio César </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq-headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Por que não consigo acessar algumas páginas? 
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-collapseThree" data-bs-parent="#accordion-FAQ">
+                  <div class="accordion-body">O site ainda está em desenvolvimento, por isso as mudanças serão constantes e nesse processo algumas funcionalidades podem ficar indisponíveis</div>
+                </div>
+              </div>
+          <!--   <div class="accordion-item">
+              <h2 class="accordion-header" id="faq-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                  Outros Projetos Abençoados
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordion-FAQ">
+                <div class="accordion-body">
+                    <div>
+                    <a href="https://eliezir.github.io/Space-Invaders/" target="_blank"rel="external"><img src="imagens Blessed/cannon.png" alt="space invaders"></a></div>
+                    <div>
+                    <a href="https://open.spotify.com/show/65Cd4rDDPgKnWbBEhuxznP?si=5371d85a3b5a4b34" target="_blank"rel="external"><img src="imagens Blessed/podcast.png" alt="podcast os abençoados"></a></div>
+                    <div><a href="https://eliezir.github.io/Simon-Game/" target="_blank"rel="external"><img src="imagens Blessed/simon.png" alt="simon game"></a></div>
+                    <div><a href="https://github.com/Eliezir/BioQuizz" target="_blank"rel="external"><img src="imagens Blessed/bioquizz.png" alt="BioQuizz"></a></div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+    </section>
+    <%- include('../footer.ejs') %>
+      
+
+   <!-- jquery cdn -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+   <!-- Owl carousel Min .js-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+     <script>
+        $('.owl-carousel').owlCarousel({
+    loop:false,
+    margin:10,
+    nav:false,
+    dotsEach:0,
+    
+    navText:["<i class='seta-series fa-solid fa-circle-arrow-left fa-2x'></i>","<i class='seta-series fa-solid fa-circle-arrow-right fa-2x'></i>" ], 
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:3
+        }
+    }
+});
+
+     </script>
+ 
+
+</body>
+</html>
