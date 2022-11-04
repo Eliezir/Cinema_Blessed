@@ -306,8 +306,6 @@ div.footer-section{
   position: static;
   text-shadow:none; }  */
 .navbar{
-  position:relative;
-  z-index: 0;
   background-image: none;
 }
 .fixed-top,#header{
