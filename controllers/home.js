@@ -16,7 +16,7 @@ module.exports = function(app){
           
             if(user && password){
                 let usuario = req.body.usuario;
-                usuario["comentarios"] = [{filme:'Click',nota:5,review:"UMA OBRA PRIMA DA SETIMA ARTE, ADAM SANDLER Um homem, uma máquina, uma besta enjaulada com ódio. Ele não para! Ele ganha e ele ganha.",poster:'ClickPoster300.png'},{filme:'Atypical',nota:5,review:"um dos melhores seriados de toda a humanidade humana.",poster:'atypicalPoster300.jpg'}];
+                usuario["comentarios"] = [];
                 req.session.usuario = usuario;
                 res.redirect("/perfil")
 

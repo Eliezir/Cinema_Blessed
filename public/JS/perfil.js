@@ -1,7 +1,7 @@
 /* Create  */
 var id;
 var posterPath;
-let PosterFilmes = ["arcanePoster300.jpg", "atypicalPoster300.jpg", "auto_da_compadecidaPoster.jpg", "Brooklyn99Poster300.jpg", "ClickPoster300.png", "comoSeFosse300.png", "DrWhoPoster300.jpg", "How_I_Met_Mother.jpg", "MaldicaoHillPoster300.jpg", "oneDayAtTimePoster300.jpg", "StrangerThings.jpg", "TheofficePoster300.jpg", "UmFazDeContaPoster300.jpg"]
+let PosterFilmes =['ACincoPassos.jpg', 'ACulpaÉDasEsterlasPoster300.jpg', 'Adão_poster.jpg', 'ArcanePoster300.jpg', 'AtypicalPoster300.jpg', 'Auto_da_compadecidaPoster.jpg', 'Brooklyn99Poster300.jpg', 'ClickPoster300.png', 'ComoSeFosse300.png', 'DrWhoPoster300.jpg', 'How_I_Met_Mother.jpg', 'MaldicaoHillPoster300.jpg', 'OneDayAtTimePoster300.jpg', 'ParaTodosOsGarotos300.png', 'StrangerThings.jpg', 'TheofficePoster300.jpg', 'UmFazDeContaPoster300.jpg']
 function setPoster(poster,type) {
   filmes.some((filme) => {
     if (filme == poster) {
@@ -63,8 +63,9 @@ document.querySelectorAll(".ratingStars").forEach(star => {
   })
 })
 
-var filmes = ['Arcane', 'Atypical', 'Auto Da Compadecida', 'Brooklyn nine-nine', 'Click', 'Como se fosse a primeira vez', 'Dr Who', 'How I Met Your Mother', 'Maldição da residencia Hill', 'One Day At Time', 'Stranger Things', 'The Office', 'Um Faz De Conta Que Acontece']
-
+var filmes = ['A Cinco Passos de Você', 'A Culpa é das Estrelas', 'Adão Negro', 'Arcane', 'Atypical', 'Auto Da Compadecida', 'Brooklyn nine-nine', 'Click', 'Como se fosse a primeira vez', 'Dr Who', 'How I Met Your Mother', 'Maldição da residencia Hill', 'One Day At Time', 'Para Todos Os Garotos', 'Stranger Things', 'The Office', 'Um Faz De Conta Que Acontece']
+console.log(filmes.sort())
+console.log(PosterFilmes.sort())
 $(function () {
   $("#filmeTitle").autocomplete({
     source: filmes

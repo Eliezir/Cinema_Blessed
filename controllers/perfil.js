@@ -37,7 +37,18 @@ module.exports = function(app){
             usuario = req.session.usuario;
             usuario.comentarios[req.params.id] = comentario;
             res.redirect("/comentarios");
-            },
+        },
+         template: function(req,res){
+            usuario = req.session.usuario;
+            usuario["comentarios"] = [
+                {filme:'Click',nota:5,review:"UMA OBRA PRIMA DA SETIMA ARTE, ADAM SANDLER Um homem, uma máquina, uma besta enjaulada com ódio. Ele não para! Ele ganha e ele ganha.",poster:'ClickPoster300.png'},
+                {filme:'Atypical',nota:5,review:"um dos melhores seriados de toda a humanidade humana.",poster:'atypicalPoster300.jpg'},
+                {filme:'Maldição da residencia Hill',nota:4,review:"é de medo mas é bom",poster:'MaldicaoHillPoster300.jpg'},
+                {filme:'The Office',nota:5,review:"That's what she said",poster:'TheofficePoster300.jpg'},
+                {filme:'One Day At Time',nota:5,review:"Combinação perfeita, a série consegue falar sobre assuntos serios e importantes sem perder o clima leve e contagiante, uma obra de arte.",poster:'oneDayAtTimePoster300.jpg'},
+              /*   {filme:'',nota:5,review:"That's what she said",poster:'TheofficePoster300.jpg'}, */];
+            res.redirect("/perfil")
+            }
     }
     return PerfilController;
 }
