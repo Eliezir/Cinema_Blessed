@@ -17,6 +17,7 @@ module.exports = function(app){
             if(user && password){
                 let usuario = req.body.usuario;
                 usuario["comentarios"] = [];
+                usuario["nome"] = usuario["user"]
                 req.session.usuario = usuario;
                 res.redirect("/perfil")
 

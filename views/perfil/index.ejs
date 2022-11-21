@@ -34,9 +34,11 @@
   <div class="container-fluid main-container">
   <header>
     <div class="userPerfil">
-      <div class="icon"></div>
+      <div class="icon">
+        <a href="perfil/editar"><i class="icon-perfilEdit fa-solid fa-pencil"></i></a>
+      </div>
       <h2 class="Nome">
-        <%= usuario.user %>
+        <%= usuario.nome %>
       </h2>
     </div>
       <button class='btn-create' data-bs-toggle="modal" data-bs-target="#modalC"> +</button>

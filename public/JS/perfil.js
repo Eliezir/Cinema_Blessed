@@ -1,7 +1,7 @@
 /* Create  */
 var id;
 var posterPath;
-let PosterFilmes =['ACincoPassos.jpg', 'ACulpaÉDasEsterlasPoster300.jpg', 'Adão_poster.jpg', 'ArcanePoster300.jpg', 'AtypicalPoster300.jpg', 'Auto_da_compadecidaPoster.jpg', 'Brooklyn99Poster300.jpg', 'ClickPoster300.png', 'ComoSeFosse300.png', 'DrWhoPoster300.jpg', 'How_I_Met_Mother.jpg', 'MaldicaoHillPoster300.jpg', 'OneDayAtTimePoster300.jpg', 'ParaTodosOsGarotos300.png', 'StrangerThings.jpg', 'TheofficePoster300.jpg', 'UmFazDeContaPoster300.jpg']
+let PosterFilmes =['ACincoPassos.jpg', 'ACulpaÉDasEstrelasPoster300.jpg', 'Adão_poster.jpg', 'ArcanePoster300.jpg', 'AtypicalPoster300.jpg', 'Auto_da_compadecidaPoster.jpg', 'Brooklyn99Poster300.jpg', 'ClickPoster300.png', 'ComoSeFosse300.png', 'DrWhoPoster300.jpg', 'How_I_Met_Mother.jpg', 'MaldicaoHillPoster300.jpg', 'OneDayAtTimePoster300.jpg', 'ParaTodosOsGarotos300.png', 'StrangerThings.jpg', 'TheofficePoster300.jpg', 'UmFazDeContaPoster300.jpg']
 function setPoster(poster,type) {
   filmes.some((filme) => {
     if (filme == poster) {

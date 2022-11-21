@@ -4,10 +4,14 @@ body{
 }
 
 .img-erro{
-    width:480px; 
-    height:480px;
+    width:400px; 
+    height:400px;
 }
 
 .main{
     height: 93vh;
+}
+
+h1{
+    color:green
 }

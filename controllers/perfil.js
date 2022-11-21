@@ -46,9 +46,12 @@ module.exports = function(app){
                 {filme:'Maldição da residencia Hill',nota:4,review:"é de medo mas é bom",poster:'MaldicaoHillPoster300.jpg'},
                 {filme:'The Office',nota:5,review:"That's what she said",poster:'TheofficePoster300.jpg'},
                 {filme:'One Day At Time',nota:5,review:"Combinação perfeita, a série consegue falar sobre assuntos serios e importantes sem perder o clima leve e contagiante, uma obra de arte.",poster:'oneDayAtTimePoster300.jpg'},
-              /*   {filme:'',nota:5,review:"That's what she said",poster:'TheofficePoster300.jpg'}, */];
+               {filme:'Para Todos Os Garotos',nota:5,review:"Lara Jean linda perfeita",poster:'ParaTodosOsGarotos300.png'},];
             res.redirect("/perfil")
-            }
+            },
+        userEdit: function(req,res){
+            res.render(userEdit)
+        }
     }
     return PerfilController;
 }
