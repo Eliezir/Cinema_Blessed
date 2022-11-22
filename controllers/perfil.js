@@ -50,7 +50,16 @@ module.exports = function(app){
             res.redirect("/perfil")
             },
             editPerfil: function(req,res){
+                usuario = req.session.usuario
             res.render("perfil/userEdit")
+        },
+        updatePerfil: function(req,res){
+           var nome = req.body.username;
+           var icon = req.body.profileIcon;
+            usuario = req.session.usuario;
+            usuario.nome = nome;
+            usuario.icon = icon;
+            res.redirect("/perfil")
         }
     }
     return PerfilController;

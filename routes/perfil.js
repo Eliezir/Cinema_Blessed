@@ -6,6 +6,7 @@ module.exports = function(app){
     app.get("/perfil/edit", autenticar, perfil.editPerfil)
     app.post("/perfil/comentario",autenticar, perfil.create)
     app.post("/perfil/comentario/:id/editar",autenticar, perfil.edit)
+    app.post("/perfil/editar",autenticar, perfil.updatePerfil)
     app.delete("/perfil/comentario/:id/",autenticar, perfil.destroy);
   /*   app.get("/comentario/:id", perfil.show); */
 };

@@ -21,17 +21,31 @@
   <script src="https://kit.fontawesome.com/e06ad0a210.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Css -->
-  <link rel="stylesheet" href="/stylesheets/stylePerfil.css">
   <link rel="stylesheet" href="/stylesheets/perfilEdit.css">
   <title>The Blessed</title>
 </head>
 <body>
   <div class="main">
-    <div class="container">
+    <div class="container col-12 col-lg-8 col-xl-5">
   <h1>Editar Perfil</h1>
   <hr>
-  <div class="icone">
+<form action="/perfil/editar" method="post" class="row">
+  <div class="col-12 col-lg-3">
+      <div class="icone">
+        <i class=" edit-img fa-solid fa-pencil"></i>
+      </div>
   </div>
- 
+<div class="col-9">
+  <input class='editInput'id="nomeInput" name="username" type="text" value='<%=usuario.nome%>'/>
+</div>
+
+<div class="container-button">
+  <hr>
+<button type="submit" class="formButton buttonSalvar">Salvar</button>
+<a style='text-decoration: none' href="/perfil">
+  <div type='submit' class="formButton buttonCancelar">Cancelar</div>
+</a>
+</div>
+</form>
 </div>
 </body>
