@@ -49,8 +49,8 @@ module.exports = function(app){
                {filme:'Para Todos Os Garotos',nota:5,review:"Lara Jean linda perfeita",poster:'ParaTodosOsGarotos300.png'},];
             res.redirect("/perfil")
             },
-        userEdit: function(req,res){
-            res.render(userEdit)
+            editPerfil: function(req,res){
+            res.render("perfil/userEdit")
         }
     }
     return PerfilController;

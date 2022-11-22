@@ -9,16 +9,11 @@ body{
 
 .userPerfil{
     display: flex;
+    flex-direction: column;
     color:white;
     padding-top: 2%;
     padding-bottom: 2%;
     padding-left: 1%;
-}
-
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .btn-create{
@@ -43,9 +38,9 @@ header{
 }
 
 .icon{
-    width: 75px;
-    height: 75px;
-    border-radius: 10px;
+    width: 260px;
+    height: 260px;
+    border-radius: 125px;
     background-color: #6320EE ;
     display: flex;
     align-items: center;
@@ -72,8 +67,12 @@ header{
 }
 
 .comentarios{
+    width:900px;
+    max-height:350px;
+    overflow:auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+
 }
 
 .comentarios h3{
@@ -92,10 +91,27 @@ header{
     margin:5px;
     display:flex;
     flex-direction: column;
-    width: 250px;
+    min-width: 250px;
     align-items: center;
     border-radius: 5px;
     height: 300px;
+}
+
+::-webkit-scrollbar{
+    height:1em;
+    width:1em;
+}
+
+::-webkit-scrollbar-track{
+    background: #242424;
+    border-radius: 25em solid green;
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color:#6520ee6e;
+    border-radius: 100vw;
+    width:1em;
 }
 
 .crud-icons > div{
@@ -200,7 +216,11 @@ flex-direction: column
  @media (max-width:600px) {
     .main-container{height:auto}
     .comentarios{
-        justify-content: center}
+        justify-content: center
+    }
+    .comentario{
+        width:150px;
+    }
  }
 
  .warningFilme{

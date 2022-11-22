@@ -1,0 +1,15 @@
+body{
+  background-color: #141414;
+}
+
+.main{
+    margin-top: 2.5em;
+    display: flex;
+    justify-content: center;
+    color:white;
+}
+
+.container{
+    width:33vw;
+    margin:auto;
+}

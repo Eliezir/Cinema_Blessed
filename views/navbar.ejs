@@ -1,36 +1,43 @@
 <!-- navbar  -->
 <section id="header">
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-default">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/sobre"> <img class="logo" src="imagens/logoBlessed.png"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarHeader">
-          <ul class="navbar-nav ms-start">
-            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="/lancamentos">Lançamentos</a></li>
-            <li class="nav-item"><a class="nav-link" href="/#series">Series</a></li></ul>
-            <ul class="navbar-nav ms-auto">
-              <%var logado = !usuario ? 'Login':usuario.user%>
-              <li class="nav-item"><a class="nav-link" href="/perfil"><%-logado%></a></li>
-            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
-                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Entre em contato</a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="mailto:empn1@aluno.ifal.edu.br" target="_blank"
-                    rel="external">Eliezir</a></li>
-                <li><a class="dropdown-item" href="mailto:bfl1@aluno.ifal.edu.br" target="_blank"
-                    rel="external">Betuel</a></li>
-                <li><a class="dropdown-item" href="mailto:casl1@aluno.ifal.edu.br" target="_blank"
-                    rel="external">Carlos</a></li>
-                <li><a class="dropdown-item" href="mailto:gmvs1@aluno.ifal.edu.br" target="_blank"
-                    rel="external">Geovanny</a></li>
-                <li><a class="dropdown-item" href="mailto:jcbf1@aluno.ifal.edu.br" target="_blank"
-                    rel="external">Júlio</a></li>
-                 </ul> </li> </ul> </div> </nav> <!-- <h1 class="titulo-carousel">Cinema abençoado</h1> -->
-        </div>
-  </section>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-default">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/sobre"> <img class="logo" src="/imagens/logoBlessed.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarHeader">
+        <ul class="navbar-nav ms-start">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/lancamentos">Lançamentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#series">Series</a></li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <%var logado=!usuario ? 'Login' :usuario.user%>
+            <%if(!usuario){%>
+              <li class="nav-item"><a class="nav-link" href="/perfil">Login</a></li>
 
-  
+              <%} else if(usuario){%>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <%-usuario.user%>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="/perfil"
+                        rel="external">Perfil</a></li>
+                    <li><li><a class="dropdown-item" href="/perfil/edit"
+                      rel="external">Editar perfil</a></li>
+                  <li>
+                      <hr class="dropdown-divider">
+                     <li><a class="dropdown-item" href="/sair">Sair</a></li> 
+                    </li>
+                  </ul>
+                </li>
+                <% } %>
+
+        </ul>
+      </div>
+  </nav>
+  </div>
+</section>

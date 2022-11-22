@@ -32,21 +32,22 @@
 <body>
   <%- include('../navbar.ejs') %>
   <div class="container-fluid main-container">
-  <header>
-    <div class="userPerfil">
+    <div class="row">
+  <header class="col-lg-3 col">
+    <div class=" userPerfil">
       <div class="icon">
-        <a href="perfil/editar"><i class="icon-perfilEdit fa-solid fa-pencil"></i></a>
       </div>
       <h2 class="Nome">
         <%= usuario.nome %>
       </h2>
     </div>
-      <button class='btn-create' data-bs-toggle="modal" data-bs-target="#modalC"> +</button>
+      <!-- <button class='btn-create' data-bs-toggle="modal" data-bs-target="#modalC"> +</button> -->
     </header>
    
-    <div class="comentarios">
+    <div class="col-lg-8 comentarios">
       <% comentarios.forEach(function(comentario,index){ %>
         <div class="comentario">
+         <!--  mudar para owl carousel -->  
           <h3>
             <%- comentario.filme%>
               </h1>
@@ -77,7 +78,7 @@
               </div>
         </div>
         <%})%>
-
+      </div>
        <!--  Modais CRUD -->
        <%- include('./modal/createModal.ejs')%> 
        <%- include('./modal/showModal.ejs', {star: 'teste'}) %>
