@@ -55,9 +55,11 @@ body{
     border: solid rgba(0, 0, 0, 0.705) 1px;
     visibility: hidden;
 }
-.icon:hover .icon-perfilEdit{
-    visibility:visible ;
+
+.icon-default{
+    font-size:128px;
 }
+
 
 .Nome{
     margin: 0;
@@ -68,12 +70,10 @@ body{
 
 .comentarios{
     width:900px;
-    max-height:350px;
+    max-height:275px;
     overflow:auto;
     display: flex;
     flex-direction: row;
-    scroll-snap-type: both proximity;
-    scroll-padding: 10px;
 }
 
 .comentarios h3{
@@ -82,26 +82,35 @@ body{
 }
 
 .posterComentario{
+    border-radius: 5px 5px 0 0;
     height:200px;
     width:133px;
 }
 
+
+
 .comentario{
-    scroll-snap-align: start;
-    scroll-margin-left: 50px;
+    position: relative;
     background-color: #242424;
     margin:5px;
     display:flex;
     flex-direction: column;
-    min-width: 250px;
     align-items: center;
     border-radius: 5px;
-    height: 300px;
+    max-height: 235px;
+}
+
+.icones-poster{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    height:100%;
 }
 
 ::-webkit-scrollbar{
-    height:1em;
-    width:1em;
+    height:0.5em;
+    width:0.1em;
 }
 
 ::-webkit-scrollbar-track{
@@ -116,7 +125,7 @@ body{
     width:1em;
 }
 
-.crud-icons > div{
+.crud-icons > div, .poster-icon{
     width: 20px;
     height: 20px;
     border-radius: 8px;
@@ -129,7 +138,7 @@ body{
 .crud-icons{
 position:absolute;
 right: 5px;
-bottom:10px;
+top:10px;
 display: none;
 flex-direction: column
 }
@@ -145,15 +154,26 @@ flex-direction: column
 .icon-delete{
     background-color: red;
 }
-.icon-show{
-    background-color: blue;
+.poster-icon{
+    border-radius: 20px;
+    font-size: 15px;
+    background-color: transparent;
+    color:#f4f4f4;
+    border: solid 2px #f4f4f4;
+    padding:10px;
+    margin:5px;
 }
 
-.comentario:hover > .crud-icons{
+.icon-link{
+    border:none;
+    font-size:18px;
+}
+
+.posterComentario:hover ~ .crud-icons,.crud-icons:hover{
     display: flex;
 }
 
-.crud-icons>div:hover > i{
+.crud-icons>div:hover > i, .poster-icon:hover{
     cursor:pointer;
     opacity: 0.7;
 }
@@ -217,13 +237,6 @@ flex-direction: column
 
  @media (max-width:600px) {
     .main-container{height:auto}
-    .comentarios{
-        justify-content: center
-    }
-    .comentario{
-        background-color: green;
-        min-width: 150px;
-    }
  }
 
  .warningFilme{

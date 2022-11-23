@@ -36,6 +36,10 @@
   <header class="col-lg-3 col">
     <div class=" userPerfil">
       <div class="icon">
+        <% var icon = usuario.nome; icon = icon.charAt(0)%> 
+        <h3 class="icon-default">
+        <%- icon %> 
+        </h3>
       </div>
       <h2 class="Nome">
         <%= usuario.nome %>
@@ -48,9 +52,12 @@
       <% comentarios.forEach(function(comentario,index){ %>
         <div class="comentario">
          <!--  mudar para owl carousel -->  
-          <h3>
-            <%- comentario.filme%>
-              </h1>
+              <img  class='posterComentario' src="imagens/posters/<%-comentario.poster%> ">
+              <div class="icones-poster ">
+              <div onClick=' setShowStars(); setShowId(this.id )' class=" poster-icon icon-show" id=<%-index%>  data-bs-toggle="modal" data-bs-target="#modalShow">
+               <i class="fa-solid fa-info"></i>
+             </div>
+             <i class="poster-icon icon-link fa-solid fa-arrow-up-right-from-square"></i></div>
               <div class="crud-icons">
                <!--  define o id do botão com o index do comentario  no array comentarios -->
                 <div onClick='setEditId(this.id )' id=<%-index%>  class="icon-edit" data-bs-toggle="modal" data-bs-target="#modalEdit">
@@ -59,23 +66,10 @@
                 <div onClick='setId(this.id)' id=<%-index%>  class="icon-delete" data-bs-toggle="modal" data-bs-target="#modalDelete">
                   <i class="fa-solid fa-trash"></i>
                 </div>
-                <div onClick=' setShowStars(); setShowId(this.id )' class="icon-show" id=<%-index%>  class="icon-delete" data-bs-toggle="modal" data-bs-target="#modalShow">
-                  <i class="fa-solid fa-info"></i>
-                </div>
+                
+              </div>
 
-              </div>
-               <img  class='posterComentario' src="imagens/posters/<%-comentario.poster%> ">
-              <div class="rating">
-                <% for(var e=0; e < Math.floor(comentario.nota); e++){%>
-                  <span class="fa fa-star checked"></span>
-                  <%}%>
-                    <%if(comentario.nota % 1 !=0){%>
-                      <span class="fa fa-star-half-o  checked"></span>
-                      <%}%>
-                        <% for(var e=0; e < Math.floor(5 - comentario.nota); e++){%>
-                          <span class="fa fa-star-o checked"></span>
-                          <%}%>
-              </div>
+         
         </div>
         <%})%>
       </div>
@@ -85,7 +79,6 @@
        <%- include('./modal/editModal.ejs')%>
         <%- include('./modal/deleteModal.ejs')%>
     </div>
-    <a href="/sair">Sair</a>
   </div>
     <%- include('../footer.ejs') %>
     <script src="JS/perfil.js"></script>
