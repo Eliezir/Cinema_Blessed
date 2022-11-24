@@ -50,6 +50,10 @@ module.exports = function(app){
                {filme:'Auto da compadecida',nota:5,review:"Uma obra de arte do cinema nacional",poster:'auto_da_compadecidaPoster.jpg'},
                {filme:'Arcane',nota:5,review:"Jinx injustiçada",poster:'arcanePoster300.jpg'},
             ];
+            usuario["twitter"] = "oEmpn_"
+            usuario["instagram"] = "Eliezir?"
+            usuario["bio"] = "Oi, eu sou o Eliezir, fã nº1 do Adam Sandler e da Lara Jean 📽"
+
             res.redirect("/perfil")
             },
             editPerfil: function(req,res){
@@ -59,9 +63,15 @@ module.exports = function(app){
         updatePerfil: function(req,res){
            var nome = req.body.username;
            var icon = req.body.profileIcon;
+           var bio = req.body.bio;
+           var twitter = req.body.twitter;
+           var instagram = req.body.instagram;
             usuario = req.session.usuario;
             usuario.nome = nome;
             usuario.icon = icon;
+            usuario.bio = bio;
+            usuario.twitter = twitter;
+            usuario.instagram = instagram;
             res.redirect("/perfil")
         }
     }

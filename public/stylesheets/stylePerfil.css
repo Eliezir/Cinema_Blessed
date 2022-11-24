@@ -17,20 +17,19 @@ body{
 }
 
 .btn-create{
-    margin-right: 15px;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 25px;
     background-color: #773de9;
     border: none;
     color: white;
-    text-align: center;
     text-decoration: none;
-    display: flex;
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
+    display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .btn-create:hover{
@@ -38,8 +37,8 @@ body{
 }
 
 .icon{
-    width: 260px;
-    height: 260px;
+    width: 15rem;
+    height: 15rem;
     border-radius: 125px;
     background-color: #6320EE ;
     display: flex;
@@ -57,19 +56,25 @@ body{
 }
 
 .icon-default{
-    font-size:128px;
+    font-size:10rem;
 }
 
 
-.Nome{
-    margin: 0;
-    padding-left: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+.userPerfil > * {
+    margin-bottom: 10px;
+}
+
+.userPerfil > div > a{
+    text-decoration: none;
+    color:#f4f4f4;
+}
+
+.userPerfil > div> a:hover{
+    text-decoration:underline;
+    color:#773de9;
 }
 
 .comentarios{
-    width:900px;
     max-height:275px;
     overflow:auto;
     display: flex;
@@ -98,6 +103,20 @@ body{
     align-items: center;
     border-radius: 5px;
     max-height: 235px;
+}
+
+/* .btn-create{
+    position:absolute;
+    z-index: 9;
+    color:white;
+} */
+
+.lista-header{
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    margin-bottom: 5px;
+    align-items: center;
 }
 
 .icones-poster{
@@ -208,7 +227,7 @@ flex-direction: column
 }
 
 #filmeTitle,#inputComentario,#filmeTitleEdit,#inputComentarioEdit,#inputComentarioShow{
-    width:100%;
+    width:80%;
     margin-top:5px;
 }
 
@@ -235,19 +254,31 @@ flex-direction: column
     height:165px
  }
 
+ .warningFilme{
+    visibility: hidden;
+    display: none;
+    color:red;
+    margin: 0;
+    font-size: 10px;
+}
+
+.wrongMovie{
+    visibility:visible !important;
+    display: block;
+}
+
  @media (max-width:600px) {
     .main-container{height:auto}
+ 
+
+ .icon-default{
+    font-size:3em;
  }
 
- .warningFilme{
-     visibility: hidden;
-     display: none;
-     color:red;
-     margin: 0;
-     font-size: 10px;
+ .icon{
+    width:5.5em;
+    height:5.5em;
  }
 
- .wrongMovie{
-     visibility:visible !important;
-     display: block;
  }
+

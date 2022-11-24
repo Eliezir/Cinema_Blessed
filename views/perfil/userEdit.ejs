@@ -26,17 +26,34 @@
 </head>
 <body>
   <div class="main">
-    <div class="container col-12 col-lg-8 col-xl-5">
+    <div class="container col-md-6 ">
   <h1>Editar Perfil</h1>
   <hr>
 <form action="/perfil/editar" method="post" class="row">
-  <div class="col-12 col-lg-3">
+  <div class="col-3 ">    
       <div class="icone">
         <i class=" edit-img fa-solid fa-pencil"></i>
+       <% if(usuario.icon == "default"){ %> 
+            <% var icon = usuario.nome; icon = icon.charAt(0)%> 
+            <h3 class="icon-default">
+            <%- icon %> 
+            </h3><% } %> 
       </div>
   </div>
-<div class="col-9">
+<div class="edit-form col-9">
   <input class='editInput'id="nomeInput" name="username" type="text" value='<%=usuario.nome%>'/>
+  <label for="bioInput">Bio</label>
+  <textarea class='editInput'id="bioInput" name="bio" type="text"  placeholder="Adicionar uma bio"><%=usuario.bio%></textarea>  
+  <div class="social-media">
+    <div>
+  <label for="twitterInput">Twitter</label>
+  <input class='editInput'id="twitterInput" name="twitter" type="text" value='<%=usuario.twitter%>' placeholder="Twitter username"/>
+  </div>
+  <div>
+  <label for="instagramInput">Instagram</label>
+  <input class='editInput'id="instagramInput" name="instagram" type="text" value='<%=usuario.instagram%>'placeholder="Instagram username"/>
+  </div>
+  </div>
 </div>
 
 <div class="container-button">

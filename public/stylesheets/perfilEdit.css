@@ -13,19 +13,26 @@ body{
 
 .icone{
   background-color: blueviolet;
-  width: 175px;
-  height: 175px;
+  width: 10vw;
+  height: 10vw;
   border-radius: 5px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-default{
+  font-size:8rem;
 }
 
 .editInput{
-width: 80%;
-margin: auto;
+width: 100%;
+margin-bottom: 20px;
 padding: 5px;
 background-color: #807f7faf;
 border: none;
-color:white;
+color:#f4f4f4;
 border-radius: 2px;
 padding-left: 8px;
 }
@@ -78,3 +85,49 @@ right: 10px;
 .icone:hover .edit-img{
   opacity: 0.5;
 }
+
+label{
+  font-weight:700;
+}
+
+.social-media>div{
+  width:100%;
+}
+
+.social-media>div:first-child{
+  margin-right: 20px;
+}
+
+.social-media{
+  display: flex;
+  width:100%
+}
+
+#bioInput{
+  min-height: 150px;
+}
+
+::placeholder{
+  color:#363636
+}
+
+
+@media (max-width:600px) {
+
+  .icone{
+   width:20vw;
+   height:20vw;
+  }
+
+   .row{
+    justify-content: center;
+  }
+
+  .icon-default{
+    font-size:3rem;
+  }
+  .edit-img{
+    font-size:8px;
+  }
+
+  }

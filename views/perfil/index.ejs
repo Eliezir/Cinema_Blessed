@@ -33,22 +33,44 @@
   <%- include('../navbar.ejs') %>
   <div class="container-fluid main-container">
     <div class="row">
-  <header class="col-lg-3 col">
+  <header class="col-lg-3">
     <div class=" userPerfil">
+      <% if(usuario.icon == "default"){ %> 
       <div class="icon">
         <% var icon = usuario.nome; icon = icon.charAt(0)%> 
         <h3 class="icon-default">
         <%- icon %> 
         </h3>
-      </div>
+      </div><% } %> 
       <h2 class="Nome">
         <%= usuario.nome %>
       </h2>
+      <div class="bio">
+        <%= usuario.bio %>
+      </div>
+      <% if(usuario.twitter) {%> 
+      <div>
+      <i class="fa-brands fa-twitter"></i>
+      <a rel="nofollow me" href="https://twitter.com/<%= usuario.twitter %>">@<%= usuario.twitter %></a>
+      </div>
+      <% } %> 
+      <% if(usuario.instagram) {%> 
+      <div>
+      <i class="fa-brands fa-instagram"></i>
+      <a rel="nofollow me" href="https://instagram.com/<%= usuario.instagram %>">@<%= usuario.instagram %></a>
+      </div>
+      <% } %> 
     </div>
-      <!-- <button class='btn-create' data-bs-toggle="modal" data-bs-target="#modalC"> +</button> -->
+      
     </header>
-   
-    <div class="col-lg-8 comentarios">
+    <div class="listas-filmes col-lg-9 ">
+    <div  class=" lista-header">
+      <h3>Comentários</h3>
+      <button class='btn-create' data-bs-toggle="modal" data-bs-target="#modalC"> +</button>
+    </div>
+    <div class="comentarios">
+
+  <!--     <h4 class="lista-label">Favoritos</h4> -->
       <% comentarios.forEach(function(comentario,index){ %>
         <div class="comentario">
          <!--  mudar para owl carousel -->  
@@ -73,6 +95,7 @@
         </div>
         <%})%>
       </div>
+    </div>
        <!--  Modais CRUD -->
        <%- include('./modal/createModal.ejs')%> 
        <%- include('./modal/showModal.ejs', {star: 'teste'}) %>
