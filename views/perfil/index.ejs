@@ -42,6 +42,11 @@
         <%- icon %> 
         </h3>
       </div><% } %> 
+      <% if(usuario.icon != "default"){ %> 
+        <div class="icon">
+         <img class="icon" src="/imagens/ProfileIcons/<%-usuario.icon%>">
+        </div><% } %> 
+
       <h2 class="Nome">
         <%= usuario.nome %>
       </h2>

@@ -53,26 +53,49 @@ module.exports = function(app){
             usuario["twitter"] = "oEmpn_"
             usuario["instagram"] = "Eliezir?"
             usuario["bio"] = "Oi, eu sou o Eliezir, fã nº1 do Adam Sandler e da Lara Jean 📽"
+            usuario["icon"] = "icon18.jpg"
 
             res.redirect("/perfil")
             },
             editPerfil: function(req,res){
                 usuario = req.session.usuario
-            res.render("perfil/userEdit")
+            res.render("perfil/perfilEdit/userEdit")
         },
+        editPerfilIcon: function(req,res){
+            usuario = req.session.usuario
+        res.render("perfil/perfilEdit/editImg")
+    },
         updatePerfil: function(req,res){
            var nome = req.body.username;
-           var icon = req.body.profileIcon;
            var bio = req.body.bio;
            var twitter = req.body.twitter;
            var instagram = req.body.instagram;
-            usuario = req.session.usuario;
+           var previousIcon = req.body.previousIcon;
+           usuario = req.session.usuario;
             usuario.nome = nome;
-            usuario.icon = icon;
             usuario.bio = bio;
             usuario.twitter = twitter;
             usuario.instagram = instagram;
+            usuario.previousIcon = previousIcon;
             res.redirect("/perfil")
+        },
+        updateIcon: function(req, res) {
+            back=req.header('Referer') || '/';
+            console.log(usuario)
+            var icon = req.body.profileIcon;
+            var previousIcon = req.body.previousIcon;
+            usuario = req.session.usuario;
+            usuario.icon = icon;
+            usuario.previousIcon = previousIcon;
+            while(true){
+                if(back[back.length-1]!= "/"){
+                    back= back.slice(0,-1)
+                }
+                else {
+                    back= back.slice(0,-1)
+                    res.redirect(back);
+                    break;}
+            }   
         }
     }
     return PerfilController;

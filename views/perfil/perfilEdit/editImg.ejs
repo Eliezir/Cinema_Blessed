@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/imagens/abençoados.ico" type="image/x-icon">
+    <!-- GoogleFonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/e06ad0a210.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Css -->
+    <link rel="stylesheet" href="/stylesheets/perfilEdit.css">
+    <title>The Blessed</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container col-md-6 ">
+            <header class="editIconHeader">
+                <div>
+               <a class="backButton"href="/perfil/edit"> <i  class="back-arrow fa-solid fa-arrow-left"></i></a>
+                <h2>Editar Perfil</h2>
+                </div>
+                <div>
+                   <h3> <%- usuario.nome %> </h3>
+                    <div class="iconeEdit">
+                        <% if(usuario.icon == "default"){ %> 
+                          <div class="iconeEdit">
+                            <% var icon = usuario.nome; icon = icon.charAt(0)%> 
+                            <h3 class="icon-defaultEdit ">
+                            <%- icon %> 
+                            </h3>
+                          </div><% } %> 
+                          <% if(usuario.icon != "default"){ %> 
+                           
+                            <div class="iconeEdit">
+                             <img href="/perfil/edit" class="iconeEdit" src="/imagens/ProfileIcons/<%-usuario.icon%>">
+                            </div>
+                           <% } %> 
+                      </div>
+                      </div>
+            </header>
+            <hr>
+            <div class="selectIcon">
+                
+<% let icons = ["icon00.jpg","icon01.jpg","icon02.jpg","icon03.jpg","icon04.jpg","icon05.jpg","icon06.jpg","icon07.jpg","icon08.jpg","icon09.jpg","icon10.jpg","icon11.jpg","icon12.jpg","icon13.jpg","icon14.jpg","icon15.jpg","icon16.jpg","icon17.jpg","icon18.jpg","icon19.jpg","icon20.jpg","icon21.jpg","icon22.jpg","icon23.jpg","icon24.jpg"] %> 
+                <% icons.forEach(function(icon){%> 
+                    <form method="post" action="/perfil/editImg">
+                    <input id="inputPreviousIcon" type="hidden" name="previousIcon" value='<%=usuario.icon%>'/>
+                    <input id="inputIcon" type="hidden" name="profileIcon" value='<%=icon%>'/>
+                    <button class="submitButton" type="submit"><img class="iconEditShow" src="/imagens/ProfileIcons/<%-icon%>"></button>
+                </form>
+                    <% }) %> 
+            </div>
+        </div>
+</body>

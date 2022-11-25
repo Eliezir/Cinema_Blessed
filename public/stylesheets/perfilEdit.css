@@ -39,7 +39,9 @@ padding-left: 8px;
 
 .container-button{
   margin-top: 20px;
+  display: inline;
 }
+
 
 
 .formButton{
@@ -54,12 +56,21 @@ padding-left: 8px;
   color: gray;
   border: solid 1px gray;
   display: inline;
+  position:absolute;
+  left: 125px;
+  top: -46px;
+  margin:0;
+}
+
+.cancelForm{
+  position: relative;
+  display: inline;
 }
 
 .buttonSalvar{
   background-color: white;
   color:black;
-  border:none;
+  border:1px solid transparent;
 }
 
 .buttonCancelar:hover{
@@ -78,6 +89,7 @@ padding: 5px;
 border: solid white 0.5px;
 border-radius: 25px;
 position:absolute;
+z-index: 9;
 bottom: 10px;
 right: 10px;
 }
@@ -111,6 +123,77 @@ label{
   color:#363636
 }
 
+a{
+  text-decoration:none;
+  color:#f8f8f8
+}
+
+a:hover{
+  text-decoration:none;
+  color:#f8f8f8
+}
+
+/* Edit img */
+.editIconHeader{
+  display: flex;
+  justify-content:space-between
+}
+
+.editIconHeader>div{
+  display: flex;
+  align-items:center
+}
+
+.editIconHeader>div>*:first-child{
+margin-right:15px
+}
+
+.iconeEdit{
+  width: 90px;
+  height: 90px;
+  background-color: blueviolet;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-defaultEdit{
+  font-size:3em;
+}
+
+.back-arrow{
+  font-size:35px;
+}
+
+.selectIcon{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  gap: 25px;
+ justify-content: center
+}
+
+.iconEditShow{
+  width:150px;
+  height: 150px;
+  border-radius:5px;
+}
+
+.iconEditShow:hover{
+ border:solid 2px #6320EE;
+ cursor: pointer;
+}
+
+.backButton:hover{
+opacity:0.5;
+color:#ffff;
+}
+
+.submitButton{
+  all:unset;
+}
 
 @media (max-width:600px) {
 
@@ -129,5 +212,6 @@ label{
   .edit-img{
     font-size:8px;
   }
+
 
   }

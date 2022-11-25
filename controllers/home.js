@@ -19,6 +19,7 @@ module.exports = function(app){
                 usuario["comentarios"] = [];
                 usuario["nome"] = usuario["user"]
                 usuario["icon"] = "default";
+                usuario["previousIcon"] = "default";
                 req.session.usuario = usuario;
                 res.redirect("/perfil")
 
