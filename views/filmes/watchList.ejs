@@ -1,0 +1,20 @@
+<%if(usuario){
+    {titulo:titulo}
+    let typeClass ="default";
+    let comentarios = usuario.comentarios;
+    let watchList = usuario.watchlist;
+comentarios.forEach(function(comentario,index){
+    console.log(comentario.filme)
+    if(comentario.filme == titulo){
+       typeClass="watched"
+    }})
+
+    %>
+    
+    <form class='watchListForm' method="post" action="/watchlist">
+        <input id="inputPreviousIcon" type="hidden" name="watchListMovie" value='<%=titulo%>'/>
+        <button>
+    <i class=" <%=typeClass%> fa-solid fa-bookmark"></i>
+        </button>
+    </form>
+<%}%>

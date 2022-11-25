@@ -81,7 +81,6 @@ module.exports = function(app){
         },
         updateIcon: function(req, res) {
             back=req.header('Referer') || '/';
-            console.log(usuario)
             var icon = req.body.profileIcon;
             var previousIcon = req.body.previousIcon;
             usuario = req.session.usuario;

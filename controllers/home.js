@@ -17,6 +17,7 @@ module.exports = function(app){
             if(user && password){
                 let usuario = req.body.usuario;
                 usuario["comentarios"] = [];
+                usuario["watchlist"] = [];
                 usuario["nome"] = usuario["user"]
                 usuario["icon"] = "default";
                 usuario["previousIcon"] = "default";

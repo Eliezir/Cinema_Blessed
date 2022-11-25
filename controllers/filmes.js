@@ -20,6 +20,13 @@ module.exports = function(app){
             usuario = req.session.usuario;
             res.render("filmes/nacional",usuario)
         }, 
+        watchlist: function(req,res){
+            usuario=req.session.usuario;
+            movie = req.body.watchListMovie;
+            usuario.watchlist.push(movie); 
+            console.log(usuario.watchlist)
+            res.redirect("/")
+        }
         
     };
     return filmeController;

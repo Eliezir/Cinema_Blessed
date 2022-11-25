@@ -77,10 +77,35 @@ iframe {
   align-items: flex-start;
 }
 
+.detalhes_filme > div:first-of-type{
+  display: flex;
+  align-items: center;
+}
+
+.fa-bookmark{
+  margin-left: 15px;
+  margin-bottom: 8px;
+  font-size: 25px;
+  color:#41494e
+}
+
+.watched{
+  color:#7442d8;
+}
+
+.watchList{
+  color:#ffa500
+}
+
+.watchListForm>button{
+  all:unset;
+}
+
+
 /* estrelas */
 
 .checked {
-  color: orange;
+  color: #ffa500;
 }
 .rating {
   margin-left: 10px;

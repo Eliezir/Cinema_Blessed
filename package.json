@@ -13,5 +13,8 @@
     "express-load": "^1.1.16",
     "express-session": "^1.17.3",
     "method-override": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }

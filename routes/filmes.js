@@ -4,4 +4,5 @@ module.exports = function(app){
     app.get("/nacional",filmes.nacional);
     app.get("/cliches",filmes.cliches);
     app.get("/lancamentos",filmes.lancamento);
+    app.post("/watchlist",filmes.watchlist)
 }
