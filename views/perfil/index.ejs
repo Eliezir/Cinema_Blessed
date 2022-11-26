@@ -70,15 +70,19 @@
     </header>
     <div class="listas-filmes col-lg-9 ">
     <div  class=" lista-header">
-      <h3>Comentários</h3>
+      <%if(comentarios.length > 0){%>
+        <h3>Comentarios</h3>
+        <% } %> 
+        <%if(comentarios.length == 0){%>
+          <h3></h3>
+          <% } %> 
       <button class='btn-create' data-bs-toggle="modal" data-bs-target="#modalC"> +</button>
     </div>
     <div class="comentarios">
 
-  <!--     <h4 class="lista-label">Favoritos</h4> -->
+  <!-- Scroll Comentarios-->
       <% comentarios.forEach(function(comentario,index){ %>
         <div class="comentario">
-         <!--  mudar para owl carousel -->  
               <img  class='posterComentario' src="imagens/posters/<%-comentario.poster%> ">
               <div class="icones-poster ">
               <div onClick=' setShowStars(); setShowId(this.id )' class=" poster-icon icon-show" id=<%-index%>  data-bs-toggle="modal" data-bs-target="#modalShow">
@@ -99,6 +103,20 @@
          
         </div>
         <%})%>
+        </div>
+        <div  class=" lista-watchList lista-header">
+          <%if(watchlist.length>0){%>
+          <h3>Watchlist</h3>
+          <% } %> 
+        </div>
+        <div class="comentarios divWatchList">
+  <!-- Scroll Watchlist-->
+        <% watchlist.forEach(function(comentario,index){ %>
+          <div  id="watchList"  class="comentario">
+                <img  class='posterComentario' src="imagens/posters/<%-comentario%> ">
+               </div>
+          <%})%>
+        </div>
       </div>
     </div>
        <!--  Modais CRUD -->

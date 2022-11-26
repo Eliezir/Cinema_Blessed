@@ -22,12 +22,15 @@ module.exports = function(app){
         }, 
         watchlist: function(req,res){
             usuario=req.session.usuario;
-            movie = req.body.watchListMovie;
-            usuario.watchlist.push(movie); 
-            console.log(usuario.watchlist)
-            res.redirect("/")
+            let movie = req.body.watchListMovie;
+            if(usuario.watchlist.includes(movie)){
+                let movieIndex = usuario.watchlist.indexOf(movie)
+                usuario.watchlist.splice(movieIndex, 1);
+            }
+            else if(!(usuario.watchlist.includes(movie))){usuario.watchlist.push(movie);}
+            
+            res.redirect(req.get('referer'));
         }
-        
     };
     return filmeController;
 }

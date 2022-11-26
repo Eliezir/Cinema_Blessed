@@ -74,12 +74,18 @@ body{
     color:#773de9;
 }
 
-.comentarios{
-    max-height:275px;
+.comentarios,.divWatchList{
+
     overflow:auto;
     display: flex;
     flex-direction: row;
 }
+
+.comentarios{
+    min-height:275px;}
+
+.divWatchList{
+    min-height:240px;}
 
 .comentarios h3{
     text-align: center;
@@ -92,7 +98,18 @@ body{
     width:133px;
 }
 
+#watchList{
+    height:200px;
+}
 
+
+#watchList>.posterComentario{
+    border-radius: 5px;
+}
+
+.lista-watchList{
+    margin-top:20px;
+}
 
 .comentario{
     position: relative;

@@ -64,8 +64,6 @@ document.querySelectorAll(".ratingStars").forEach(star => {
 })
 
 var filmes = ['A Cinco Passos de Você', 'A Culpa é das Estrelas', 'Adão Negro', 'Arcane', 'Atypical', 'Auto Da Compadecida', 'Brooklyn nine-nine', 'Click', 'Como se fosse a primeira vez', 'Dr Who', 'How I Met Your Mother', 'Maldição da residencia Hill', 'One Day At Time', 'Para Todos Os Garotos', 'Stranger Things', 'The Office', 'Um Faz De Conta Que Acontece']
-console.log(filmes.sort())
-console.log(PosterFilmes.sort())
 $(function () {
   $("#filmeTitle").autocomplete({
     source: filmes

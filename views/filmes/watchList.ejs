@@ -1,19 +1,26 @@
 <%if(usuario){
     {titulo:titulo}
     let typeClass ="default";
+    let buttonEnable = "";
     let comentarios = usuario.comentarios;
     let watchList = usuario.watchlist;
-comentarios.forEach(function(comentario,index){
-    console.log(comentario.filme)
-    if(comentario.filme == titulo){
+    comentarios.forEach(function(comentario,index){
+    if(comentario.poster == titulo){
        typeClass="watched"
+       buttonEnable= "disabled"
+       return;
     }})
+  
 
+   if(watchList.includes(titulo) && typeClass == "default" ){typeClass="watchList"}
+ if(!watchList.includes(titulo) && typeClass == "default" ){
+        typeClass="default"
+    }
     %>
     
     <form class='watchListForm' method="post" action="/watchlist">
-        <input id="inputPreviousIcon" type="hidden" name="watchListMovie" value='<%=titulo%>'/>
-        <button>
+        <input id="Form<%=titulo%>" type="hidden" name="watchListMovie" value='<%=titulo%>'/>
+        <button <%=buttonEnable%>>
     <i class=" <%=typeClass%> fa-solid fa-bookmark"></i>
         </button>
     </form>

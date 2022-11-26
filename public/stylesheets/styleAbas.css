@@ -86,15 +86,17 @@ iframe {
   margin-left: 15px;
   margin-bottom: 8px;
   font-size: 25px;
-  color:#41494e
+  color:#41494e;
+  cursor:pointer;
 }
 
 .watched{
-  color:#7442d8;
+  color:#7442d8 !important;
 }
 
 .watchList{
-  color:#ffa500
+  color:#ffa500;
+  cursor:pointer;
 }
 
 .watchListForm>button{
