@@ -12,7 +12,7 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
   <!-- favicon -->
-  <link rel="shortcut icon" href="imagens/abençoados.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/imagens/abençoados.ico" type="image/x-icon">
   <!-- GoogleFonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -21,8 +21,8 @@
   <script src="https://kit.fontawesome.com/e06ad0a210.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Css -->
-  <link rel="stylesheet" href="stylesheets/stylePerfil.css">
-  <link rel="stylesheet" href="stylesheets/default.css">
+  <link rel="stylesheet" href="/stylesheets/stylePerfil.css">
+  <link rel="stylesheet" href="/stylesheets/default.css">
 <!-- jquery -->
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -35,49 +35,45 @@
     <div class="row">
   <header class="col-lg-3">
     <div class=" userPerfil">
-      <% if(usuario.icon == "default"){ %> 
+      <% if(user.icon == "default"){ %> 
       <div class="icon">
-        <% var icon = usuario.nome; icon = icon.charAt(0)%> 
+        <% var icon = user.nome; icon = icon.charAt(0)%> 
         <h3 class="icon-default">
         <%- icon %> 
         </h3>
       </div><% } %> 
-      <% if(usuario.icon != "default"){ %> 
+      <% if(user.icon != "default"){ %> 
         <div class="icon">
-         <img class="icon" src="/imagens/ProfileIcons/<%-usuario.icon%>">
+         <img class="icon" src="/imagens/ProfileIcons/<%-user.icon%>">
         </div><% } %> 
 
       <h2 class="Nome">
-        <%= usuario.nome %>
+        <%= user.nome %>
       </h2>
       <div class="bio">
-        <%= usuario.bio %>
+        <%= user.bio %>
       </div>
-      <div class="followers">
-        <div>
-        <i class="fa-solid fa-users"></i>
-        <%- usuario.seguindo.length %> 
-       <p>seguindo</p>
-        </div>
-        ·
-        <div>
-          <%- usuario.seguidores.length %> 
-          <p>seguidores</p>
-          </div>
-      </div> 
-      <% if(usuario.twitter) {%> 
+      <% if(user.twitter) {%> 
       <div>
       <i class="fa-brands fa-twitter"></i>
-      <a rel="nofollow me" href="https://twitter.com/<%= usuario.twitter %>">@<%= usuario.twitter %></a>
+      <a rel="nofollow me" href="https://twitter.com/<%= user.twitter %>">@<%= user.twitter %></a>
       </div>
       <% } %> 
-      <% if(usuario.instagram) {%> 
+      <% if(user.instagram) {%> 
       <div>
       <i class="fa-brands fa-instagram"></i>
-      <a rel="nofollow me" href="https://instagram.com/<%= usuario.instagram %>">@<%= usuario.instagram %></a>
+      <a rel="nofollow me" href="https://instagram.com/<%= user.instagram %>">@<%= user.instagram %></a>
       </div>
       <% } %> 
-    
+      <% if(usuario){%>
+
+        <% if(usuario.seguindo.includes(user.nome)){%> 
+          <form method="post" action="/perfil/<%=user.nome%>/unfollow">
+          <button class="FollowButton Unfollow"type="submit">Unfollow</button>  <% } %> 
+        <% if(!usuario.seguindo.includes(user.nome)){%> 
+          <form method="post" action="/perfil/<%=user.nome%>/follow">
+          <button class="FollowButton Follow"type="submit">Follow</button>  <% } %> 
+     <% } %> 
     </div>
       
     </header>
@@ -89,30 +85,19 @@
         <%if(comentarios.length == 0){%>
           <h3></h3>
           <% } %> 
-      <button class='btn-create' data-bs-toggle="modal" data-bs-target="#modalC"> +</button>
     </div>
     <div class="comentarios">
 
   <!-- Scroll Comentarios-->
       <% comentarios.forEach(function(comentario,index){ %>
         <div class="comentario">
-              <img  class='posterComentario' src="imagens/posters/<%-comentario.poster%> ">
+              <img  class='posterComentario' src="/imagens/posters/<%-comentario.poster%> ">
               <div class="icones-poster ">
-              <div onClick=' setShowStars(); setShowId(this.id )' class=" poster-icon icon-show" id=<%-index%>  data-bs-toggle="modal" data-bs-target="#modalShow">
+              <div onClick=' setShowStars(); setShowId(this.id )' class=" poster-icon icon-show" id='<%-index%>'  data-bs-toggle="modal" data-bs-target="#modalShow">
                <i class="fa-solid fa-info"></i>
              </div>
              <i class="poster-icon icon-link fa-solid fa-arrow-up-right-from-square"></i></div>
-              <div class="crud-icons">
-               <!--  define o id do botão com o index do comentario  no array comentarios -->
-                <div onClick='setEditId(this.id )' id=<%-index%>  class="icon-edit" data-bs-toggle="modal" data-bs-target="#modalEdit">
-                  <i class="fa-solid fa-pencil"></i>
-                </div>
-                <div onClick='setId(this.id)' id=<%-index%>  class="icon-delete" data-bs-toggle="modal" data-bs-target="#modalDelete">
-                  <i class="fa-solid fa-trash"></i>
-                </div>
-                
-              </div>
-
+            
          
         </div>
         <%})%>
@@ -133,40 +118,24 @@
       </div>
     </div>
        <!--  Modais CRUD -->
-       <%- include('./modal/createModal.ejs')%> 
-       <%- include('./modal/showModal.ejs', {star: 'teste'}) %>
-       <%- include('./modal/editModal.ejs')%>
-        <%- include('./modal/deleteModal.ejs')%>
+       <%- include('../perfil/modal/createModal') %>
+       <%- include('../perfil/modal/showModal', {star: 'teste'}) %>
     </div>
   </div>
     <%- include('../footer.ejs') %>
-    <script src="JS/perfil.js"></script>
+    <script src="/JS/perfil.js"></script>
     <script>
 
-    /*   Função para exibir os valores no modal de editar comentarios */
-     function setEditId(index){ 
-      /* aqui ele fala que da erro mas roda normal */
-       // @ts-ignore
-      let user =  <%-JSON.stringify(usuario)%>
-      console.log();
-      document.getElementById('editButton').action = `/perfil/comentario/${index}/editar`
-      document.getElementById('filmeTitleEdit').value   =user.comentarios[index].filme;
-      document.getElementById('inputNota').value = user.comentarios[index].nota;
-      document.getElementById('inputComentarioEdit').value = user.comentarios[index].review
-      document.getElementById('posterModalEdit').src = `imagens/posters/${user.comentarios[index].poster}`
-      document.getElementById("filmePosterEdit").value = user.comentarios[index].poster
-      document.getElementById(`EditStar`+ user.comentarios[index].nota).click();
-    }
-
+    /*   Função para exibir os valores no modal comentarios */
     function setShowId(index){ 
       /* aqui ele fala que da erro mas roda normal */
        // @ts-ignore
-      let user =  <%-JSON.stringify(usuario)%>
-      console.log();
+      let user =  <%-JSON.stringify(user)%>
+      console.log(user.comentarios[index].nota);
       document.getElementById('showFilmeTitle').innerHTML  = user.comentarios[index].filme;
       document.getElementById('inputNotaShow').value = user.comentarios[index].nota;
       document.getElementById('inputComentarioShow').value = user.comentarios[index].review
-      document.getElementById('posterModalShow').src = `imagens/posters/${user.comentarios[index].poster}`
+      document.getElementById('posterModalShow').src = `/imagens/posters/${user.comentarios[index].poster}`
       document.getElementById('inputNotaShow').value = user.comentarios[index].nota;
       document.getElementById(`readStars`+ user.comentarios[index].nota).click();
       

@@ -99,6 +99,12 @@ module.exports = function(app){
                     res.redirect(back);
                     break;}
             }   
+        },
+        amigos: function(req, res){
+           usuario =  req.session.usuario;
+           users = req.session.users;
+            params = {usuario: usuario, users: users}
+            res.render("perfil/amigos", params)
         }
     }
     return PerfilController;

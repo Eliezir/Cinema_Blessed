@@ -74,6 +74,43 @@ body{
     color:#773de9;
 }
 
+.FollowButton{
+    background:transparent;
+    border: solid 1px gray;
+    color:white;
+    padding:5px;
+    margin-top: 10px;
+    border-radius:5px;
+    width: 100%;
+}
+
+.Follow:hover{
+    border: 1px solid green;
+    color:green;
+}
+
+.Unfollow:hover{
+    border: 1px solid red;
+    color:red;
+}
+
+.followers>div>p{
+    display: inline;
+    color:#929292
+}
+
+.followers>div>i{
+    color:#929292
+}
+
+.followers{
+  display:flex;
+  gap:5px;
+  font-size:15px;
+  margin: 20px 0;
+}
+
+
 .comentarios,.divWatchList{
 
     overflow:auto;
@@ -94,7 +131,7 @@ body{
 
 .posterComentario{
     border-radius: 5px 5px 0 0;
-    height:200px;
+    min-height:200px;
     width:133px;
 }
 

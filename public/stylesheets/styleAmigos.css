@@ -1,0 +1,33 @@
+.Amigos{
+    width: 100%;
+    height:285px;
+    border: solid 2px #ffff;
+    border-radius: 5px;
+    margin-bottom:20px;
+    color:white;
+    display:flex;
+
+}
+
+.amigoIcon{
+    width:150px;
+    height:150px;
+    border-radius: 75px;}
+
+.AmigosPerfil{
+    width:25%;
+    display:flex;
+    align-items:center;
+    flex-direction:column
+}
+
+.filmes{
+    width:100%;
+    height:100%;
+    overflow: auto;
+}
+
+.icones-poster{
+    justify-content: center;
+    gap:3px;
+}

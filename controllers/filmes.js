@@ -28,8 +28,8 @@ module.exports = function(app){
                 usuario.watchlist.splice(movieIndex, 1);
             }
             else if(!(usuario.watchlist.includes(movie))){usuario.watchlist.push(movie);}
-            
-            res.redirect(req.get('referer'));
+            let back = req.get('referer')
+            res.redirect(`${back}#filme3`);
         }
     };
     return filmeController;
