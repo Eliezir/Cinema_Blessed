@@ -33,12 +33,27 @@
 <body>
   <%- include('../navbar.ejs') %>
   <div class="container-fluid main-container">
+    <%let amigos = []
+    usuario.seguindo.forEach(function(userName){
+      let amigo = users[users.findIndex(user => user.user === userName)]
+        amigos.push({
+          nome:amigo.nome,
+          match:0,
+          comentarios:amigo.comentarios
+        })
+    })
+    console.log(amigos[0].comentarios)
+    %>
+
+
     <% usuario.seguindo.forEach(function(userName){%>
         <%let amigo = users[users.findIndex(user => user.user === userName)]%>
     <div class="Amigos">
         <div class="AmigosPerfil">
-        <h2><%-amigo.nome%></h2>
+          <a href="/perfil/<%-amigo.nome%>">
         <img class="amigoIcon" src="/imagens/ProfileIcons/<%-amigo.icon%> ">
+          </a>
+        <h2><%-amigo.nome%></h2>
     </div>
     <div class="filmes">
         <div class="comentarios">

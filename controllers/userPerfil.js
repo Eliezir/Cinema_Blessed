@@ -3,8 +3,8 @@ module.exports = function(app){
         index: function(req,res){
             let usuario = req.session.usuario;
             let userName = req.params.user;
-            
-            let userIndex = users.findIndex(user => user.user === userName)
+            let users = req.session.users
+            let userIndex = users.findIndex(user => user.nome === userName)
             let comentarios = users[userIndex].comentarios
             let watchlist = users[userIndex].watchlist
             let params = {usuario: usuario, user:users[userIndex], comentarios: comentarios, watchlist: watchlist}

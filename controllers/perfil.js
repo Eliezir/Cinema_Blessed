@@ -15,6 +15,7 @@ module.exports = function(app){
             if(usuario.watchlist.includes(comentario.poster)){
                 usuario.watchlist.splice(usuario.watchlist.indexOf(comentario.poster), 1);
             }
+            console.log(usuario)
             res.redirect("/perfil")
         },
         edit: function (req, res) {
@@ -54,6 +55,7 @@ module.exports = function(app){
                 {filme:'One Day At Time',nota:5,review:"Combinação perfeita, a série consegue falar sobre assuntos serios e importantes sem perder o clima leve e contagiante, uma obra de arte.",poster:'oneDayAtTimePoster300.jpg'},
                {filme:'Arcane',nota:5,review:"Jinx injustiçada",poster:'arcanePoster300.jpg'},
             ];
+            usuario["seguindo"] = ["AdamSandler","Teste","Veterano16","VinniBoy","GeoMax"]
             usuario["twitter"] = "oEmpn_"
             usuario["instagram"] = "Eliezir?"
             usuario["bio"] = "Oi, eu sou o Eliezir, fã nº1 do Adam Sandler e da Lara Jean 📽"
