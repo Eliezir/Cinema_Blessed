@@ -7,6 +7,7 @@ body{
     background-color:#141414;
 }
 
+
 .userPerfil{
     display: flex;
     flex-direction: column;
@@ -188,14 +189,15 @@ body{
 
 ::-webkit-scrollbar-track{
     background: #242424;
-    border-radius: 25em solid green;
     border-radius: 100vw;
+    border: solid 3px transparent;
 }
 
 ::-webkit-scrollbar-thumb{
     background-color:#6520ee48;
     border-radius: 100vw;
     width:1em;
+    border: solid 3px transparent;
 }
 
 .crud-icons > div, .poster-icon{

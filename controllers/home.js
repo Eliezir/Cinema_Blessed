@@ -36,7 +36,7 @@ module.exports = function (app) {
                         { filme: 'The Office', nota: 5, review: "That's what she said", poster: 'TheofficePoster300.jpg' },
                         { filme: 'One Day At Time', nota: 5, review: "Combinação perfeita, a série consegue falar sobre assuntos serios e importantes sem perder o clima leve e contagiante, uma obra de arte.", poster: 'oneDayAtTimePoster300.jpg' },
                         { filme: 'Arcane', nota: 5, review: "Jinx injustiçada", poster: 'arcanePoster300.jpg' },
-                        { filme: 'Auto Da Compadecida', nota: 1, review: "Jinx injustiçada", poster: 'Auto_da_compadecidaPoster.jpg',}
+                        { filme: 'Auto Da Compadecida', nota: 5, review: "Simplesmente o maior e melhor filme nacional de todos os tempos", poster: 'Auto_da_compadecidaPoster.jpg',}
                     ]
                 },
                 {
