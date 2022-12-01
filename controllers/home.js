@@ -15,8 +15,8 @@ module.exports = function (app) {
                     comentarios: [
 
                         { filme: 'Click', nota: 5, review: "ADAM SANDLER Um homem", poster: 'ClickPoster300.png' },
-                        { filme: 'Como se fosse a primeira vez ', nota: 5, review: "ADAM SANDLER", poster: 'comoSeFosse300.png' },
-                        { filme: 'Um faz de conta que acontece ', nota: 5, review: "ADAM SANDLER", poster: 'UmFazDeContaPoster300.jpg' },
+                        { filme: 'Como se fosse a primeira vez', nota: 5, review: "ADAM SANDLER", poster: 'comoSeFosse300.png' },
+                        { filme: 'Um Faz De Conta Que Acontece', nota: 5, review: "ADAM SANDLER", poster: 'UmFazDeContaPoster300.jpg' },
                     ]
                 },
                 {
@@ -36,7 +36,7 @@ module.exports = function (app) {
                         { filme: 'The Office', nota: 5, review: "That's what she said", poster: 'TheofficePoster300.jpg' },
                         { filme: 'One Day At Time', nota: 5, review: "Combinação perfeita, a série consegue falar sobre assuntos serios e importantes sem perder o clima leve e contagiante, uma obra de arte.", poster: 'oneDayAtTimePoster300.jpg' },
                         { filme: 'Arcane', nota: 5, review: "Jinx injustiçada", poster: 'arcanePoster300.jpg' },
-                        { filme: 'Auto Da Compadecida', nota: 5, review: "Jinx injustiçada", poster: 'Auto_da_compadecidaPoster.jpg',}
+                        { filme: 'Auto Da Compadecida', nota: 1, review: "Jinx injustiçada", poster: 'Auto_da_compadecidaPoster.jpg',}
                     ]
                 },
                 {
@@ -49,31 +49,31 @@ module.exports = function (app) {
                     comentarios: [
                         {
                           filme: 'A Cinco Passos de Você',
-                          nota: '5',
+                          nota: 1,
                           poster: 'ACincoPassos.jpg',
                           review: 'Lindo boy'
                         },
                         {
                           filme: 'A Culpa é das Estrelas',
-                          nota: '5',
+                          nota: 5,
                           poster: 'ACulpaÉDasEstrelasPoster300.jpg',
                           review: 'lindo tbm\r\n'
                         },
                         {
                           filme: 'Adão Negro',
-                          nota: '5',
+                          nota: 5,
                           poster: 'Adão_poster.jpg',
                           review: 'THE ROCK'
                         },
                         {
                           filme: 'Arcane',
-                          nota: '1',
+                          nota: 1,
                           poster: 'ArcanePoster300.jpg',
                           review: 'LOL'
                         },
                         {
                           filme: 'Click',
-                          nota: '4',
+                          nota: 1,
                           poster: 'ClickPoster300.png',
                           review: 'top'
                         }
@@ -96,45 +96,45 @@ module.exports = function (app) {
                     comentarios: [
                       {
                         filme: 'Como se fosse a primeira vez',
-                        nota: '5',
+                        nota: 5,
                         poster: 'ComoSeFosse300.png',
                         review: 'Adam Sandler'
                       },
                       {
                         filme: 'Click',
-                        nota: '5',
+                        nota: 5,
                         poster: 'ClickPoster300.png',
                         review: 'Adam Sandler'
                       },
                       {
                         filme: 'Um Faz De Conta Que Acontece',
-                        nota: '5',
+                        nota: 5,
                         poster: 'UmFazDeContaPoster300.jpg',
-                        review: 'AdamSandler'
+                        review: 'UMA OBRA PRIMA DA SETIMA ARTE, ADAM SANDLER Um homem, uma máquina, uma besta enjaulada com ódio. Ele não para! Ele ganha e ele ganha.'
                       },
                       {
                         filme: 'Stranger Things',
-                        nota: '4',
+                        nota: 4,
                         poster: 'StrangerThings.jpg',
                         review: 'Doidera'
                       },
                       {
                         filme: 'Dr Who',
-                        nota: '1',
+                        nota: 1,
                         poster: 'DrWhoPoster300.jpg',
                         review: 'Muito Ruim'
                       },
                       {
                         filme: 'Atypical',
-                        nota: '3',
+                        nota: 3,
                         poster: 'AtypicalPoster300.jpg',
-                        review: 'Bom'
+                        review: 'Lindo boy, todo mundo deveria assistir, 🐧'
                       },
                       {
                         filme: 'Adão Negro',
                         nota: '1',
                         poster: 'Adão_poster.jpg',
-                        review: 'porrada'
+                        review: 'porrada, the rock, deserto e uma criança fazendo piada, é um filme do the rock com um menino do tiktok(tem o peter kavinsky mas nada de lara jean)'
                       }
                     ],
                     watchlist: [ 'ParaTodosOsGarotos300.png', 'ACulpaÉDasEstrelasPoster300.jpg' ],
@@ -145,31 +145,31 @@ module.exports = function (app) {
                     comentarios: [
                       {
                         filme: 'Dr Who',
-                        nota: '5',
+                        nota: 5,
                         poster: 'DrWhoPoster300.jpg',
                         review: 'MUITO BOM'
                       },
                       {
                         filme: 'Brooklyn nine-nine',
-                        nota: '5',
+                        nota: 5,
                         poster: 'Brooklyn99Poster300.jpg',
                         review: 'UMA OBRA DE ARTE'
                       },
                       {
                         filme: 'Stranger Things',
-                        nota: '4',
+                        nota: 4,
                         poster: 'StrangerThings.jpg',
                         review: 'Muito bom'
                       },
                       {
                         filme: 'Para Todos Os Garotos',
-                        nota: '1',
+                        nota: 1,
                         poster: 'ParaTodosOsGarotos300.png',
                         review: 'eca'
                       },
                       {
                         filme: 'Arcane',
-                        nota: '5',
+                        nota: 5,
                         poster: 'ArcanePoster300.jpg',
                         review: 'LOL'
                       }

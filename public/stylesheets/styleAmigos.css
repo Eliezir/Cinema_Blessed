@@ -38,11 +38,108 @@
     height: auto;
 }
 
+.recomendados{
+    height: 350px; 
+    margin: 20px 0;
+    gap:15px;
+    overflow: auto;
+}
+
+.filmeRecomendado{
+    border-radius: 5px;
+    min-width:360px;
+    height:240px;
+   display:flex;
+   flex:1;
+   box-shadow: 0px 5px 10px 0px rgba(15, 15, 15, 0.7); 
+    ;
+}
+
+
+.filmeRecomendado > .posterComentario{
+    max-height: 200px;
+}
+
+
+.reviews{
+    overflow: auto;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.review{
+    width:80%;
+    margin-bottom: 30px;
+}
+
+.review-header{
+    display:flex;
+    align-items: center;
+    color:white;
+    gap:2.5px
+}
+
+.stars{
+    color:white;
+    display:flex;
+    justify-content:flex-end;
+}
+
+.reviewIcon{
+    height:30px;
+    width:30px;
+    border-radius: 15px;
+}
+
+.review-autor{
+    color:white;
+    font-size:20px;
+    margin:0;
+}
+
+.review-texto{
+    color:white;
+    font-size:18px;
+    text-align: justify;
+    margin:0;
+}
+
+.section-title{
+    color:white;
+}
+
+.rating-geral{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:2.5px;
+    color:white;
+    font-weight: bold;
+    height:40px;
+}
+
+.rating-geral>i{
+    color:red;
+}
+
 @media (max-width:600px) {
     .posterComentario{
         min-height: 150px;
         width: 100px;
     }
+
+    .filmeRecomendado > div> .posterComentario{
+       width:133px;
+       min-height:200px;
+    }
+
+    .filmeRecomendado{
+        min-width: 330px;
+    }
+
 
     .comentario{
         height: 190px;
@@ -50,6 +147,5 @@
 
     .comentarios{
         align-items: center;
-        
     }
 }

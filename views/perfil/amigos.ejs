@@ -33,18 +33,105 @@
 <body>
   <%- include('../navbar.ejs') %>
   <div class="container-fluid main-container">
+    <%if(usuario.seguindo){%>
+
+  
     <%let amigos = []
+    let meusComentarios = []
+    usuario.comentarios.forEach((comentario) => {
+      meusComentarios.push(comentario.filme)
+    })
     usuario.seguindo.forEach(function(userName){
       let amigo = users[users.findIndex(user => user.user === userName)]
+      let nota = 0;
+      let media = 0;
+      amigo.comentarios.forEach((comentario) =>{
+        if(meusComentarios.includes(comentario.filme)){
+          nota += Math.abs(comentario.nota - usuario.comentarios[usuario.comentarios.findIndex(comentarioUser => comentarioUser.filme === comentario.filme)].nota)
+          media +=1
+        }
+      })
+        nota = nota/media
+        if(media){
         amigos.push({
+          media:media,
           nome:amigo.nome,
-          match:0,
+          icon:amigo.icon,
+          match:(5-nota).toFixed(1),
           comentarios:amigo.comentarios
         })
+      }
     })
-    console.log(amigos[0].comentarios)
-    %>
+    let recomendacoes = []
+    let recomendacoesTitulos = []
+    amigos.forEach((amigo) => {
+      console.log(amigo.nome)
+      console.log(amigo.match)
+      console.log("")
+      amigo.comentarios.forEach((comentario)=>{
+        if(!meusComentarios.includes(comentario.filme)){
 
+          if(recomendacoesTitulos.includes(comentario.filme)){
+            let filmeIndex = recomendacoes.findIndex(filme => filme.filme === comentario.filme) 
+            recomendacoes[filmeIndex].review.push({
+              autor:amigo.nome,
+              amigoFoto:amigo.icon,
+              amigoNota:comentario.nota,
+              amigoReview:comentario.review,
+            })
+           recomendacoes[filmeIndex].nota =  ((recomendacoes[filmeIndex].nota * recomendacoes[filmeIndex].notaMedia + comentario.nota * amigo.match) / (5+5)).toFixed(1) 
+           recomendacoes[filmeIndex].notaMedia += 5;  
+          }
+          else{
+          recomendacoesTitulos.push(comentario.filme)
+          recomendacoes.push({
+            filme:comentario.filme,
+            poster:comentario.poster,
+            review:[{
+              autor:amigo.nome,
+              amigoFoto:amigo.icon,
+              amigoNota:comentario.nota,
+              amigoReview:comentario.review,
+            
+            }],
+       
+            nota:comentario.nota * amigo.match /5,
+            notaMedia:5,
+          })
+        }
+      }
+      })
+    })
+    %>
+<%if(recomendacoes.length > 0){%>
+<h2 class="section-title">Você pode gostar</h2>
+<div class="comentarios recomendados">
+<%recomendacoes.forEach((filme)=>{%>
+  <div class="filmeRecomendado">
+    <div>
+    <img  class='posterComentario' src="/imagens/posters/<%-filme.poster%> ">
+    <div class="rating-geral">
+      <i class="fa-solid fa-heart"></i>
+    <%-parseFloat(filme.nota)%>
+    </div>
+    </div>
+    <div class="reviews">
+      <% filme.review.forEach((review)=>{%> 
+        <div class="review">
+          <div class="review-header">
+            <img  class='reviewIcon' src="/imagens/ProfileIcons/<%-review.amigoFoto%>">
+            <p class="review-autor"><%-review.autor%></p>
+          </div>
+          <p class="review-texto"><%-review.amigoReview%></p>
+          <div class="stars">
+            <%- review.amigoNota %>  <span id='star1' class="fa fa-star checked ratingStars"></span></div>
+        </div>
+        <%})%> 
+    </div>
+  </div>
+  <%})%> 
+</div>
+  <%}%> 
 
     <% usuario.seguindo.forEach(function(userName){%>
         <%let amigo = users[users.findIndex(user => user.user === userName)]%>
@@ -76,9 +163,9 @@
     </div>
 </div>
     <%}) %> 
-  
-
+    <%}%>
   </div>
+ 
     <%- include('../footer.ejs') %>
 </body>
 </html>
