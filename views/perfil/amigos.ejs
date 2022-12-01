@@ -43,6 +43,7 @@
     })
     usuario.seguindo.forEach(function(userName){
       let amigo = users[users.findIndex(user => user.user === userName)]
+      console.log(amigo)
       let nota = 0;
       let media = 0;
       amigo.comentarios.forEach((comentario) =>{
@@ -57,17 +58,15 @@
           media:media,
           nome:amigo.nome,
           icon:amigo.icon,
-          match:(5-nota).toFixed(1),
+          match:(nota).toFixed(1),
           comentarios:amigo.comentarios
         })
       }
+  
     })
     let recomendacoes = []
     let recomendacoesTitulos = []
     amigos.forEach((amigo) => {
-      console.log(amigo.nome)
-      console.log(amigo.match)
-      console.log("")
       amigo.comentarios.forEach((comentario)=>{
         if(!meusComentarios.includes(comentario.filme)){
 
@@ -79,11 +78,12 @@
               amigoNota:comentario.nota,
               amigoReview:comentario.review,
             })
-           recomendacoes[filmeIndex].nota =  ((recomendacoes[filmeIndex].nota * recomendacoes[filmeIndex].notaMedia + comentario.nota * amigo.match) / (5+5)).toFixed(1) 
-           recomendacoes[filmeIndex].notaMedia += 5;  
+           recomendacoes[filmeIndex].nota =  ((recomendacoes[filmeIndex].nota  + comentario.nota - 5 * amigo.match*2/10) / (2)).toFixed(1) 
+       
           }
           else{
           recomendacoesTitulos.push(comentario.filme)
+          console.log()
           recomendacoes.push({
             filme:comentario.filme,
             poster:comentario.poster,
@@ -95,8 +95,7 @@
             
             }],
        
-            nota:comentario.nota * amigo.match /5,
-            notaMedia:5,
+            nota: Math.abs(comentario.nota - 5 * amigo.match*2/10),
           })
         }
       }

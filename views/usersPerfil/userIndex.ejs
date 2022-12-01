@@ -131,7 +131,6 @@
       /* aqui ele fala que da erro mas roda normal */
        // @ts-ignore
       let user =  <%-JSON.stringify(user)%>
-      console.log(user.comentarios[index].nota);
       document.getElementById('showFilmeTitle').innerHTML  = user.comentarios[index].filme;
       document.getElementById('inputNotaShow').value = user.comentarios[index].nota;
       document.getElementById('inputComentarioShow').value = user.comentarios[index].review
