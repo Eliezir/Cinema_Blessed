@@ -35,8 +35,8 @@ module.exports = function (app) {
                         { filme: 'Maldição da residencia Hill', nota: 4, review: "é de medo mas é bom", poster: 'MaldicaoHillPoster300.jpg' },
                         { filme: 'The Office', nota: 5, review: "That's what she said", poster: 'TheofficePoster300.jpg' },
                         { filme: 'One Day At Time', nota: 5, review: "Combinação perfeita, a série consegue falar sobre assuntos serios e importantes sem perder o clima leve e contagiante, uma obra de arte.", poster: 'oneDayAtTimePoster300.jpg' },
-                        { filme: 'Arcane', nota: 5, review: "Jinx injustiçada", poster: 'arcanePoster300.jpg' },
-                        { filme: 'Auto Da Compadecida', nota: 5, review: "Simplesmente o maior e melhor filme nacional de todos os tempos", poster: 'Auto_da_compadecidaPoster.jpg',}
+                        { filme: 'Arcane', nota: 5, review: "Jinx injustiçada", poster: 'ArcanePoster300.jpg' },
+                        { filme: 'Auto Da Compadecida', nota: 5, review: "Simplesmente o maior e melhor filme nacional de todos os tempos", poster: 'auto_da_compadecidaPoster.jpg',}
                     ]
                 },
                 {
@@ -50,7 +50,7 @@ module.exports = function (app) {
                         {
                           filme: 'A Cinco Passos de Você',
                           nota: 1,
-                          poster: 'ACincoPassos.jpg',
+                          poster: 'AcincoPassos.jpg',
                           review: 'Lindo boy'
                         },
                         {
@@ -79,9 +79,9 @@ module.exports = function (app) {
                         }
                       ],
                       watchlist: [
-                        'Auto_da_compadecidaPoster.jpg',
+                        'auto_da_compadecidaPoster.jpg',
                         'UmFazDeContaPoster300.jpg',
-                        'ComoSeFosse300.png'
+                        'comoSeFosse300.png'
                       ],
                 },
                 {
@@ -97,7 +97,7 @@ module.exports = function (app) {
                       {
                         filme: 'Como se fosse a primeira vez',
                         nota: 5,
-                        poster: 'ComoSeFosse300.png',
+                        poster: 'comoSeFosse300.png',
                         review: 'Adam Sandler'
                       },
                       {
