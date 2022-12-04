@@ -76,4 +76,9 @@ p.copymsg {
   .navbar{
       padding-bottom: 0.5rem;
 }
+.footer-section{
+  position: relative;
+ }
+
 }
+
