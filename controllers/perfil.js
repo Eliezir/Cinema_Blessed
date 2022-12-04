@@ -60,7 +60,7 @@ module.exports = function(app){
             usuario["instagram"] = "Eliezir?"
             usuario["bio"] = "Oi, eu sou o Eliezir, fã nº1 do Adam Sandler e da Lara Jean 📽"
             usuario["icon"] = "icon18.jpg"
-            usuario["watchlist"] = ["ACulpaÉDasEstrelasPoster300.jpg","ACincoPassos.jpg","Adão_poster.jpg","Auto_da_compadecidaPoster.jpg","ComoSeFosse300.png"]
+            usuario["watchlist"] = ["ACulpaÉDasEstrelasPoster300.jpg","AcincoPassos.jpg","Adão_poster.jpg","auto_da_compadecidaPoster.jpg","comoSeFosse300.png"]
             res.redirect("/perfil")
             },
             editPerfil: function(req,res){
