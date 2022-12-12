@@ -66,9 +66,10 @@
     let recomendacoes = []
     let recomendacoesTitulos = []
     amigos.forEach((amigo) => {
+      
       amigo.comentarios.forEach((comentario)=>{
-        if(!meusComentarios.includes(comentario.filme)){
 
+        if(!meusComentarios.includes(comentario.filme)){
           if(recomendacoesTitulos.includes(comentario.filme)){
             let filmeIndex = recomendacoes.findIndex(filme => filme.filme === comentario.filme) 
             recomendacoes[filmeIndex].review.push({
@@ -110,16 +111,13 @@
 <%if(recomendacoes.length > 0){%>
 <h2 class="section-title">Você pode gostar</h2>
 <div class="comentarios recomendados">
-<%recomendacoes.forEach((filme)=>{%>
+<%recomendacoes.forEach((filme)=>{
+  if(filme.nota >= 3){%>
   <div class="filmeRecomendado">
     <div class="teste"></div>
     <div class="sidebar">
 
     <img  class='posterComentario' src="/imagens/posters/<%-filme.poster%> ">
-    <div class="rating-geral">
-      <i class="fa-solid fa-heart"></i>
-    <%-parseFloat(filme.nota)%>
-    </div>
     </div>
     <div class="reviews">
       <% filme.review.forEach((review)=>{%> 
@@ -135,7 +133,7 @@
         <%})%> 
     </div>
   </div>
-  <%})%> 
+  <%}})%> 
 </div>
   <%}%> 
   <h2 class="section-title">Amigos</h2>
