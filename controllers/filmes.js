@@ -1,4 +1,5 @@
 module.exports = function(app){
+    var Usuario = app.models.usuario; //# <<
     var filmeController = {
         adam: function(req,res){
             //acesso a pagina adam sandler
@@ -20,7 +21,7 @@ module.exports = function(app){
             usuario = req.session.usuario;
             res.render("filmes/nacional",usuario)
         }, 
-        watchlist: function(req,res){
+        watchlist: async function(req,res){
             usuario=req.session.usuario;
             let movie = req.body.watchListMovie;
             if(usuario.watchlist.includes(movie)){
@@ -29,6 +30,7 @@ module.exports = function(app){
             }
             else if(!(usuario.watchlist.includes(movie))){usuario.watchlist.push(movie);}
             let back = req.get('referer')
+            await Usuario.updateOne({ _id: usuario._id }, usuario);
             res.redirect(`${back}#filme3`);
         }
     };
