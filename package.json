@@ -5,7 +5,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
-    
   },
   "dependencies": {
     "body-parser": "~1.0.0",
@@ -14,7 +13,9 @@
     "express": "~4.16.1",
     "express-load": "^1.1.16",
     "express-session": "^1.17.3",
-    "method-override": "^3.0.0"
+    "method-override": "^3.0.0",
+    "mongoose": "^7.1.1",
+    "mongose": "^0.0.2-security"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
