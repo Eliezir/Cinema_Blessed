@@ -67,10 +67,10 @@
       <% } %> 
       <% if(usuario){%>
 
-        <% if(usuario.seguindo.includes(user.nome)){%> 
+        <% if(usuario.following.includes(user.nome)){%> 
           <form method="post" action="/perfil/<%=user.nome%>/unfollow">
           <button class="FollowButton Unfollow"type="submit">Unfollow</button>  <% } %> 
-        <% if(!usuario.seguindo.includes(user.nome)){%> 
+        <% if(!usuario.following.includes(user.nome)){%> 
           <form method="post" action="/perfil/<%=user.nome%>/follow">
           <button class="FollowButton Follow"type="submit">Follow</button>  <% } %> 
      <% } %> 
