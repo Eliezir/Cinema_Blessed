@@ -2,7 +2,6 @@ module.exports = function(app){
     let perfil = app.controllers.perfil;
     let autenticar = require("../middlewares/autenticador");
     app.get('/perfil',autenticar, perfil.index )
-    app.get("/perfil/template",autenticar, perfil.template)
     app.get("/perfil/edit", autenticar, perfil.editPerfil)
     app.get("/perfil/edit/icon", autenticar, perfil.editPerfilIcon)
     app.get("/perfil/amigos", autenticar, perfil.amigos)
