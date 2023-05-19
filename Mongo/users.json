@@ -1,0 +1,366 @@
+[{
+  "_id": {
+    "$oid": "6466b16a469a428d3eefed8a"
+  },
+  "user": "AdamSandler",
+  "senha": "AdamSandler123",
+  "nome": "AdamSandler",
+  "instagram": "adamsandler",
+  "twitter": "adamsandler",
+  "bio": "The GOAT",
+  "icon": "icon11.jpg",
+  "following": [
+    "oempn"
+  ],
+  "comentarios": [
+    {
+      "filme": "Click",
+      "nota": 5,
+      "review": "ADAM SANDLER Um homem",
+      "poster": "ClickPoster300.png"
+    },
+    {
+      "filme": "Como se fosse a primeira vez",
+      "nota": 5,
+      "review": "ADAM SANDLER",
+      "poster": "comoSeFosse300.png"
+    },
+    {
+      "filme": "Um Faz De Conta Que Acontece",
+      "nota": 5,
+      "review": "ADAM SANDLER",
+      "poster": "UmFazDeContaPoster300.jpg"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6466b16a469a428d3eefed8b"
+  },
+  "user": "oempn",
+  "senha": "oempn123",
+  "nome": "Eliezir",
+  "instagram": "Eliezir?",
+  "twitter": "oEmpn_",
+  "bio": "Oi, eu sou o Eliezir, fã nº1 do Adam Sandler",
+  "icon": "icon18.jpg",
+  "following": [
+    "Teste",
+    "Veterano16",
+    "VinniBoy",
+    "GeoMax",
+    "AdamSandler"
+  ],
+  "followers": [
+    "AdamSandler"
+  ],
+  "watchlist": [
+    "AcincoPassos.jpg",
+    "Adão_poster.jpg",
+    "auto_da_compadecidaPoster.jpg",
+    "comoSeFosse300.png"
+  ],
+  "comentarios": [
+    {
+      "filme": "Brooklyn nine-nine",
+      "review": "noice",
+      "nota": 5,
+      "poster": "Brooklyn99Poster300.jpg",
+      "_id": {
+        "$oid": "6466b2f7f7eea0fca48a7cae"
+      }
+    },
+    {
+      "filme": "Para Todos Os Garotos",
+      "review": "Uma obra de arte do cinema, lara jean linda perfeita",
+      "nota": 5,
+      "poster": "ParaTodosOsGarotos300.png",
+      "_id": {
+        "$oid": "6466b2f7f7eea0fca48a7caf"
+      }
+    },
+    {
+      "filme": "Click",
+      "review": "UMA OBRA PRIMA DA SETIMA ARTE, ADAM SANDLER Um homem, uma máquina, uma besta enjaulada com ódio. Ele não para! Ele ganha e ele ganha.",
+      "nota": 5,
+      "poster": "ClickPoster300.png",
+      "_id": {
+        "$oid": "6466b2f7f7eea0fca48a7cb0"
+      }
+    },
+    {
+      "filme": "Maldição da residencia Hill",
+      "review": "é de medo mas é bom",
+      "nota": 4,
+      "poster": "MaldicaoHillPoster300.jpg",
+      "_id": {
+        "$oid": "6466b2f7f7eea0fca48a7cb2"
+      }
+    },
+    {
+      "filme": "The Office",
+      "review": "That's what she said",
+      "nota": 5,
+      "poster": "TheofficePoster300.jpg",
+      "_id": {
+        "$oid": "6466b2f7f7eea0fca48a7cb3"
+      }
+    },
+    {
+      "filme": "One Day At Time",
+      "review": "Combinação perfeita, a série consegue falar sobre assuntos serios e importantes sem perder o clima leve e contagiante, uma obra de arte.",
+      "nota": 5,
+      "poster": "oneDayAtTimePoster300.jpg",
+      "_id": {
+        "$oid": "6466b2f7f7eea0fca48a7cb4"
+      }
+    },
+    {
+      "filme": "Arcane",
+      "review": "Jinx injustiçada",
+      "nota": 5,
+      "poster": "arcanePoster300.jpg",
+      "_id": {
+        "$oid": "6466b2f7f7eea0fca48a7cb5"
+      }
+    },
+    {
+      "filme": "A Culpa é das Estrelas",
+      "review": "Muito lindo ta doido 😭😭",
+      "nota": 4,
+      "poster": "ACulpaÉDasEstrelasPoster300.jpg",
+      "_id": {
+        "$oid": "6466b385017e945ccca7a646"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6466bbd5469a428d3eefed8c"
+  },
+  "user": "Teste",
+  "senha": "teste123",
+  "nome": "teste",
+  "instagram": "EmPn",
+  "twitter": "EmPn",
+  "bio": "EmPn",
+  "icon": "icon12.jpg",
+  "watchlist": [],
+  "comentarios": [
+    {
+      "filme": "Brooklyn nine-nine",
+      "nota": 5,
+      "review": "noice",
+      "poster": "Brooklyn99Poster300.jpg"
+    },
+    {
+      "filme": "Para Todos Os Garotos",
+      "nota": 5,
+      "review": "Uma obra de arte do cinema, lara jean linda perfeita",
+      "poster": "ParaTodosOsGarotos300.png"
+    },
+    {
+      "filme": "Click",
+      "nota": 5,
+      "review": "UMA OBRA PRIMA DA SETIMA ARTE, ADAM SANDLER Um homem, uma máquina, uma besta enjaulada com ódio. Ele não para! Ele ganha e ele ganha.",
+      "poster": "ClickPoster300.png"
+    },
+    {
+      "filme": "Atypical",
+      "nota": 5,
+      "review": "um dos melhores seriados de toda a humanidade humana.",
+      "poster": "atypicalPoster300.jpg"
+    },
+    {
+      "filme": "Maldição da residencia Hill",
+      "nota": 4,
+      "review": "é de medo mas é bom",
+      "poster": "MaldicaoHillPoster300.jpg"
+    },
+    {
+      "filme": "The Office",
+      "nota": 5,
+      "review": "That's what she said",
+      "poster": "TheofficePoster300.jpg"
+    },
+    {
+      "filme": "One Day At Time",
+      "nota": 5,
+      "review": "Combinação perfeita, a série consegue falar sobre assuntos serios e importantes sem perder o clima leve e contagiante, uma obra de arte.",
+      "poster": "oneDayAtTimePoster300.jpg"
+    },
+    {
+      "filme": "Arcane",
+      "nota": 5,
+      "review": "Jinx injustiçada",
+      "poster": "ArcanePoster300.jpg"
+    },
+    {
+      "filme": "Auto Da Compadecida",
+      "nota": 5,
+      "review": "Simplesmente o maior e melhor filme nacional de todos os tempos",
+      "poster": "auto_da_compadecidaPoster.jpg"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6466bbd5469a428d3eefed8d"
+  },
+  "user": "Veterano16",
+  "senha": "veterano123",
+  "nome": "Veterano16",
+  "instagram": "TheRock",
+  "bio": "Julio Cesar, o maior fã de barraca do beijo de maceió ",
+  "icon": "icon19.jpg",
+  "watchlist": [
+    "auto_da_compadecidaPoster.jpg",
+    "UmFazDeContaPoster300.jpg",
+    "comoSeFosse300.png"
+  ],
+  "comentarios": [
+    {
+      "filme": "A Cinco Passos de Você",
+      "nota": 1,
+      "poster": "AcincoPassos.jpg",
+      "review": "Lindo boy"
+    },
+    {
+      "filme": "A Culpa é das Estrelas",
+      "nota": 5,
+      "poster": "ACulpaÉDasEstrelasPoster300.jpg",
+      "review": "lindo tbm\r\n"
+    },
+    {
+      "filme": "Adão Negro",
+      "nota": 5,
+      "poster": "Adão_poster.jpg",
+      "review": "THE ROCK"
+    },
+    {
+      "filme": "Arcane",
+      "nota": 1,
+      "poster": "ArcanePoster300.jpg",
+      "review": "LOL"
+    },
+    {
+      "filme": "Click",
+      "nota": 1,
+      "poster": "ClickPoster300.png",
+      "review": "top"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6466bbd5469a428d3eefed8e"
+  },
+  "user": "VinniBoy",
+  "senha": "VinniBoy123",
+  "following": [
+    "AdamSandler"
+  ],
+  "followers": [],
+  "nome": "VinniBoy",
+  "icon": "icon02.jpg",
+  "previousIcon": "icon02.jpg",
+  "bio": "Amante da obra de Adam Sandler",
+  "instagram": "luiz.vinnicius",
+  "comentarios": [
+    {
+      "filme": "Como se fosse a primeira vez",
+      "nota": 5,
+      "poster": "comoSeFosse300.png",
+      "review": "Adam Sandler"
+    },
+    {
+      "filme": "Click",
+      "nota": 5,
+      "poster": "ClickPoster300.png",
+      "review": "Adam Sandler"
+    },
+    {
+      "filme": "Um Faz De Conta Que Acontece",
+      "nota": 5,
+      "poster": "UmFazDeContaPoster300.jpg",
+      "review": "UMA OBRA PRIMA DA SETIMA ARTE, ADAM SANDLER Um homem, uma máquina, uma besta enjaulada com ódio. Ele não para! Ele ganha e ele ganha."
+    },
+    {
+      "filme": "Stranger Things",
+      "nota": 4,
+      "poster": "StrangerThings.jpg",
+      "review": "Doidera"
+    },
+    {
+      "filme": "Dr Who",
+      "nota": 1,
+      "poster": "DrWhoPoster300.jpg",
+      "review": "Muito Ruim"
+    },
+    {
+      "filme": "Atypical",
+      "nota": 3,
+      "poster": "AtypicalPoster300.jpg",
+      "review": "Lindo boy, todo mundo deveria assistir, 🐧"
+    },
+    {
+      "filme": "Adão Negro",
+      "nota": "1",
+      "poster": "Adão_poster.jpg",
+      "review": "porrada, the rock, deserto e uma criança fazendo piada, é um filme do the rock com um menino do tiktok(tem o peter kavinsky mas nada de lara jean)"
+    }
+  ],
+  "watchlist": [
+    "ParaTodosOsGarotos300.png",
+    "ACulpaÉDasEstrelasPoster300.jpg"
+  ]
+},{
+  "_id": {
+    "$oid": "6466bbd5469a428d3eefed8f"
+  },
+  "user": "GeoMax",
+  "senha": "GeoMax123",
+  "password": "geomax",
+  "comentarios": [
+    {
+      "filme": "Dr Who",
+      "nota": 5,
+      "poster": "DrWhoPoster300.jpg",
+      "review": "MUITO BOM"
+    },
+    {
+      "filme": "Brooklyn nine-nine",
+      "nota": 5,
+      "poster": "Brooklyn99Poster300.jpg",
+      "review": "UMA OBRA DE ARTE"
+    },
+    {
+      "filme": "Stranger Things",
+      "nota": 4,
+      "poster": "StrangerThings.jpg",
+      "review": "Muito bom"
+    },
+    {
+      "filme": "Para Todos Os Garotos",
+      "nota": 1,
+      "poster": "ParaTodosOsGarotos300.png",
+      "review": "eca"
+    },
+    {
+      "filme": "Arcane",
+      "nota": 5,
+      "poster": "ArcanePoster300.jpg",
+      "review": "LOL"
+    }
+  ],
+  "watchlist": [
+    "ClickPoster300.png",
+    "UmFazDeContaPoster300.jpg",
+    "Adão_poster.jpg"
+  ],
+  "following": [],
+  "followers": [],
+  "nome": "GeoMax",
+  "icon": "icon07.jpg",
+  "previousIcon": "icon07.jpg",
+  "bio": "Gosto de filmes de qualidade duvidosa",
+  "twitter": "geovanny_maxV",
+  "instagram": "geovanny_max"
+}]
