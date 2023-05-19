@@ -33,16 +33,19 @@
 <body>
   <%- include('../navbar.ejs') %>
   <div class="container-fluid main-container">
-    <%if(usuario.seguindo){%>
+    <%
+
+      if(friends){%>
 
   
-    <%let amigos = []
-    let meusComentarios = []
+    <%let amigos = [];
+    let meusComentarios = [];
     usuario.comentarios.forEach((comentario) => {
       meusComentarios.push(comentario.filme)
     })
-    usuario.seguindo.forEach(function(userName){
-      let amigo = users[users.findIndex(user => user.user === userName)]
+    friends.forEach(function(user){
+      console.log(user)
+      let amigo = user;
       let nota = 0;
       let media = 0;
       amigo.comentarios.forEach((comentario) =>{
@@ -137,8 +140,8 @@
 </div>
   <%}%> 
   <h2 class="section-title">Amigos</h2>
-    <% usuario.seguindo.forEach(function(userName){%>
-        <%let amigo = users[users.findIndex(user => user.user === userName)]%>
+    <% friends.forEach(function(user){%>
+        <%let amigo = user%>
     <div class="Amigos">
         <div class="AmigosPerfil">
           <a href="/perfil/<%-amigo.nome%>">
@@ -149,7 +152,7 @@
     <div class="filmes">
         <div class="comentarios">
 
-            <!-- Scroll Comentarios-->
+       
                 <% amigo.comentarios.forEach(function(comentario,index){ %>
                   <div class="comentario">
                         <img  class='posterComentario' src="/imagens/posters/<%-comentario.poster%> ">
